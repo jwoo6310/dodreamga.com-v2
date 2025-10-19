@@ -181,26 +181,27 @@
             </div>
         </div>
     <!-- Mobile menu -->
-    <div class="md:hidden flex justify-end px-4 py-2">
+    <div class="md:hidden flex justify-between items-center px-4 py-2 bg-white">
+        <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
+            <i data-feather="menu"></i>
+        </button>
         <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-blue-500 text-blue-600 hover:bg-blue-50 transition-colors">한글/ENG</button>
     </div>
-        <div class="md:hidden hidden" id="mobile-menu">
+        <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1">
                 <a id="m-home" href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
                 <a id="m-about" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
-                <a id="m-community" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Sermons</a>
-                <a id="m-events" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Ministries</a>
-                <a id="m-nextgen" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Events</a>
-                <a id="m-smd" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+                <a id="m-community" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Our Community</a>
+                <a id="m-events" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Events</a>
+                <a id="m-nextgen" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Next Gen</a>
+                <a id="m-smd" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">SMD344</a>
             </div>
-            <div class="pt-4 pb-3 border-t border-gray-200">
-                <div class="mt-3 space-y-1">
-                    <a href="#" class="block w-full px-4 py-2 text-center text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md">
-                        <i data-feather="calendar" class="inline mr-2"></i> Visit Us
-                    </a>
-                </div>
+            <div class="pt-4 pb-3 border-t border-gray-200 px-4">
+                <a href="#" class="block w-full px-4 py-3 text-center text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md">
+                    <i data-feather="calendar" class="inline mr-2"></i> Visit Us
+                </a>
             </div>
-        </div>
+</div>
     </nav>
 
     <!-- Hero Section -->
@@ -913,7 +914,8 @@
                 }
             }
             languageToggle.textContent = currentLanguage === 'en' ? '한글' : 'ENG';
-        }
+            document.getElementById('mobile-language-toggle').textContent = currentLanguage === 'en' ? '한글' : 'ENG';
+}
 
         // Initialize with English
         updateLanguage();
@@ -943,13 +945,24 @@ document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click'
 
         // Initialize feather icons
         feather.replace();
-
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
         // Mobile language toggle
-        const mobileLanguageToggle = document.getElementById('mobile-language-toggle');
-        mobileLanguageToggle.addEventListener('click', () => {
+        document.getElementById('mobile-language-toggle').addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent menu toggle when clicking language button
             currentLanguage = currentLanguage === 'en' ? 'ko' : 'en';
             updateLanguage();
         });
-    </script>
+// Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('mobile-menu');
+            if (!menu.contains(e.target) && !document.getElementById('mobile-menu-toggle').contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+</script>
 </body>
 </html>
