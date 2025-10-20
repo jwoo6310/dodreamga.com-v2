@@ -263,7 +263,7 @@
                     <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
                         <div class="relative block w-full bg-white overflow-hidden rounded-lg">
                             <div class="youtube-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                <div class="youtube-video">
+                                <div class="youtube-video" style="position:absolute; top:0; left:0; width:100%; height:100%;">
                                     <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
@@ -882,7 +882,7 @@
             }
         };
         // Usage: Fetch video once and apply to both elements
-        fetchVideo('.youtube-video, .youtube-mobile');
+        fetchVideo('.youtube-video');
         });
     </script>
 </body>
