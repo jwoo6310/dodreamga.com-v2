@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoDream Baptist Church</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -35,138 +37,125 @@
             <div class="flex justify-between h-16">
                 <div class="hidden md:flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="logo.png" alt="DoDream Church Logo" class="h-12 w-auto">
+                        <img src="./assets/img/logo.png" alt="DoDream Church Logo" class="h-12 w-auto">
                     </div>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
                     <div class="hidden md:ml-6 md:flex md:items-center">
                         <ul class="flex space-x-6">
-                        <!-- 홈  -->
+                        <!-- Home  -->
                         <li class="relative group">
                             <button id="nav-home" class="px-3 py-2 font-medium text-gray-900 border-b-2 border-blue-500 hover:text-blue-600 focus:outline-none">
-                            홈
+                            Home
                             </button>
                         </li>
-                        <!-- 교회 소개 -->
+                        <!-- About -->
                         <li class="relative group">
                             <button id="nav-about" class="px-3 py-2 font-medium hover:text-blue-600 focus:outline-none">
-                            교회 소개
+                            About
                             </button>
                             <div class="absolute top-full left-0 pt-2"> 
-                                <div
-                                class="w-56 bg-white rounded-md py-2 shadow-lg
+                                <div class="w-56 bg-white rounded-md py-2 shadow-lg
                                         opacity-0 translate-y-1 pointer-events-none
                                         transition ease-out duration-150
                                         group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto"
-                                >
-                                    <a id="about-greeting" href="https://dodreamga.com/pages/better-together-1-1" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">인사말</a>
-                                    <a id="about-vision" href="https://dodreamga.com/pages/better-together-1-2" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">교회 비전</a>
-                                    <a id="about-worship" href="https://dodreamga.com/pages/better-together-1-3" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">예배시간 안내</a>
-                                    <a id="about-location" href="https://dodreamga.com/pages/better-together-1-4" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">오시는 길</a>
+                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+                                    <a id="about-greeting" href="./about/greeting.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Greeting</a>
+                                    <a id="about-vision" href="./about/vision.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Vision</a>
+                                    <a id="about-worship" href="./about/schedule.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Worship Schedule</a>
+                                    <a id="about-location" href="./about/directions.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Directions</a>
                                 </div>
                             </div>
                         </li>
-                        <!-- 교회 구성 -->
+                        <!-- Our Community -->
                         <li class="relative group">
                             <button id="nav-community" class="px-3 py-2 font-medium hover:text-blue-600 focus:outline-none">
-                            교회 구성
+                            Our Community
                             </button>
                             <div class="absolute top-full left-0 pt-2"> 
-                                <div
-                                class="w-56 bg-white rounded-md py-2 shadow-lg
+                                <div class="w-56 bg-white rounded-md py-2 shadow-lg
                                         opacity-0 translate-y-1 pointer-events-none
                                         transition ease-out duration-150
                                         group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto"
-                                >
-                                    <a id="community-pos" href="https://dodreamga.com/pages/better-together-2-1" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">POS 모임</a>
-                                    <a id="community-school" href="https://dodreamga.com/pages/better-together-2-2" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">한국 학교</a>
-                                    <a id="community-dept" href="https://dodreamga.com/pages/better-together-2-3" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">부서</a>
+                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+                                    <a id="community-pos" href="https://dodreamga.com/pages/better-together-2-1" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">POS Groups</a>
+                                    <a id="community-school" href="https://dodreamga.com/pages/better-together-2-2" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Korean School</a>
+                                    <a id="community-dept" href="https://dodreamga.com/pages/better-together-2-3" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Departments</a>
                                 </div>
                             </div>
                         </li>
-                    
-                        <!-- 행사 및 모임 -->
+                        <!-- Events -->
                         <li class="relative group">
                             <button id="nav-events" class="px-3 py-2 font-medium hover:text-blue-600 focus:outline-none">
-                            행사 및 모임
+                            Events
                             </button>
                             <div class="absolute top-full left-0 pt-2"> 
-                                <div
-                                class="w-56 bg-white rounded-md py-2 shadow-lg
+                                <div class="w-56 bg-white rounded-md py-2 shadow-lg
                                         opacity-0 translate-y-1 pointer-events-none
                                         transition ease-out duration-150
                                         group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto"
-                                >
-                                    <a id="events-regular" href="https://dodreamga.com/pages/better-together-3-1" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">정기모임</a>
-                                    <a id="events-seminar" href="https://dodreamga.com/pages/better-together-3-2" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">세미나</a>
-                                    <a id="events-school" href="https://dodreamga.com/pages/better-together-3-3" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">학교</a>
-                                    <a id="events-special" href="https://dodreamga.com/pages/better-together-3-4" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">특별행사</a>
+                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+                                    <a id="events-regular" href="https://dodreamga.com/pages/better-together-3-1" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Regular Meetings</a>
+                                    <a id="events-seminar" href="https://dodreamga.com/pages/better-together-3-2" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Seminars</a>
+                                    <a id="events-school" href="https://dodreamga.com/pages/better-together-3-3" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Classes</a>
+                                    <a id="events-special" href="https://dodreamga.com/pages/better-together-3-4" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Special Events</a>
                                 </div>
                             </div>
                         </li>
-                    
-                        <!-- 다음 세대 -->
+                        <!-- Next Gen -->
                         <li class="relative group">
                             <button id="nav-nextgen" class="px-3 py-2 font-medium hover:text-blue-600 focus:outline-none">
-                            다음 세대
+                            Next Gen
                             </button>
                             <div class="absolute top-full left-0 pt-2"> 
-                                <div
-                                class="w-56 bg-white rounded-md py-2 shadow-lg
+                                <div class="w-56 bg-white rounded-md py-2 shadow-lg
                                         opacity-0 translate-y-1 pointer-events-none
                                         transition ease-out duration-150
                                         group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto"
-                                >
+                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
                                     <a id="nextgen-ss" href="https://dodreamga.com/pages/better-together-4-1" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Sunday School</a>
                                     <a id="nextgen-em" href="https://dodreamga.com/pages/better-together-4-2" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">DREAM EM</a>
-                                    <a id="nextgen-youth" href="https://dodreamga.com/pages/better-together-4-3" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">청년부</a>
-                                    <a id="nextgen-gallery" href="https://dodreamga.com/pages/better-together-4-4" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">사진첩</a>
+                                    <a id="nextgen-youth" href="https://dodreamga.com/pages/better-together-4-3" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Young Adult</a>
+                                    <a id="nextgen-gallery" href="https://dodreamga.com/pages/better-together-4-4" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Gallery</a>
                                 </div>
                             </div>
                         </li>
-                    
-                        <!-- SMD344 선교단 -->
+                        <!-- SMD344 -->
                         <li class="relative group">
                             <button id="nav-smd" class="px-3 py-2 font-medium hover:text-blue-600 focus:outline-none">
-                            SMD344 선교단
+                            SMD344
                             </button>
                             <div class="absolute top-full left-0 pt-2"> 
-                                <div
-                                class="w-56 bg-white rounded-md py-2 shadow-lg
+                                <div class="w-56 bg-white rounded-md py-2 shadow-lg
                                         opacity-0 translate-y-1 pointer-events-none
                                         transition ease-out duration-150
                                         group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto"
-                                >
-                                    <a id="smd-missionary" href="https://dodreamga.com/pages/better-together-5-1" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">후원 선교사</a>
-                                    <a id="smd-discipleship" href="https://dodreamga.com/pages/better-together-5-2" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">제자 훈련</a>
+                                        group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+                                    <a id="smd-missionary" href="https://dodreamga.com/pages/better-together-5-1" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Missionaries</a>
+                                    <a id="smd-discipleship" href="https://dodreamga.com/pages/better-together-5-2" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Discipleship</a>
                                 </div>
                             </div>
                         </li>
-                    
-                        <!-- Language toggle stays to the right -->
+                        <!-- Language Toggle -->
                         <li class="flex items-center">
                             <button id="language-toggle" class="ml-2 px-2 py-1 text-sm rounded border border-blue-500 text-blue-600 hover:bg-blue-50 transition-colors">
                             한글/ENG
                             </button>
                         </li>
                     </div>
-                <div class="-mr-2 flex items-center md:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
-                        <i data-feather="menu"></i>
-                    </button>
+                    <!-- Hidden Mobile Menu -->
+                    <div class="-mr-2 flex items-center md:hidden">
+                        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                            <i data-feather="menu"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Mobile menu -->
+        <!-- Mobile Menu Top Bar -->
         <div class="md:hidden flex items-center justify-between px-4 py-2 bg-white">
             <div class="flex-shrink-0 flex items-center">
-                <img src="logo.png" alt="DoDream Church Logo" class="h-10 w-auto">
+                <img src="./assets/img/logo.png" alt="DoDream Church Logo" class="h-10 w-auto">
             </div>
             <div class="flex items-center space-x-2">
                 <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-blue-500 text-blue-600 hover:bg-blue-50 transition-colors">한글/ENG</button>
@@ -175,86 +164,79 @@
                 </button>        
             </div>
         </div>
-        
         <!-- Mobile menu with submenus -->
         <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1">
-
-                <!-- Home (no submenu) -->
+                <!-- Home -->
                 <a id="m-home" href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
                 Home
                 </a>
-
-                <!-- About (submenu) -->
+                <!-- About -->
                 <button id="m-about-toggle"
                 class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
-                <span id="m-about">About</span>
-                <span class="ml-2 inline-flex items-center">
-                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
-                </span>
+                    <span id="m-about">About</span>
+                    <span class="ml-2 inline-flex items-center">
+                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    </span>
                 </button>
                 <div id="m-about-sub" class="hidden pl-8 space-y-1">
-                <a id="m-about-greeting"  href="https://dodreamga.com/pages/better-together-1-1" class="block py-2 text-gray-600 hover:text-blue-600">Greeting</a>
-                <a id="m-about-vision"    href="https://dodreamga.com/pages/better-together-1-2" class="block py-2 text-gray-600 hover:text-blue-600">Vision</a>
-                <a id="m-about-worship"   href="https://dodreamga.com/pages/better-together-1-3" class="block py-2 text-gray-600 hover:text-blue-600">Worship Schedule</a>
-                <a id="m-about-location"  href="https://dodreamga.com/pages/better-together-1-4" class="block py-2 text-gray-600 hover:text-blue-600">Directions</a>
+                    <a id="m-about-greeting"  href="/about/greeting.html" class="block py-2 text-gray-600 hover:text-blue-600">Greeting</a>
+                    <a id="m-about-vision"    href="/about/vision.html" class="block py-2 text-gray-600 hover:text-blue-600">Vision</a>
+                    <a id="m-about-worship"   href="/about/schedule.html" class="block py-2 text-gray-600 hover:text-blue-600">Worship Schedule</a>
+                    <a id="m-about-location"  href="/about/directions.html" class="block py-2 text-gray-600 hover:text-blue-600">Directions</a>
                 </div>
-
-                <!-- Our Community (submenu) -->
+                <!-- Our Community -->
                 <button id="m-community-toggle"
                 class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
-                <span id="m-community">Our Community</span>
-                <span class="ml-2 inline-flex items-center">
-                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
-                </span>
+                    <span id="m-community">Our Community</span>
+                    <span class="ml-2 inline-flex items-center">
+                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    </span>
                 </button>
                 <div id="m-community-sub" class="hidden pl-8 space-y-1">
-                <a id="m-community-pos"     href="https://dodreamga.com/pages/better-together-2-1" class="block py-2 text-gray-600 hover:text-blue-600">POS Groups</a>
-                <a id="m-community-school"  href="https://dodreamga.com/pages/better-together-2-2" class="block py-2 text-gray-600 hover:text-blue-600">Korean School</a>
-                <a id="m-community-dept"    href="https://dodreamga.com/pages/better-together-2-3" class="block py-2 text-gray-600 hover:text-blue-600">Departments</a>
+                    <a id="m-community-pos"     href="https://dodreamga.com/pages/better-together-2-1" class="block py-2 text-gray-600 hover:text-blue-600">POS Groups</a>
+                    <a id="m-community-school"  href="https://dodreamga.com/pages/better-together-2-2" class="block py-2 text-gray-600 hover:text-blue-600">Korean School</a>
+                    <a id="m-community-dept"    href="https://dodreamga.com/pages/better-together-2-3" class="block py-2 text-gray-600 hover:text-blue-600">Departments</a>
                 </div>
-
-                <!-- Events (submenu) -->
+                <!-- Events -->
                 <button id="m-events-toggle"
                 class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
-                <span id="m-events">Events</span>
-                <span class="ml-2 inline-flex items-center">
-                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
-                </span>
+                    <span id="m-events">Events</span>
+                    <span class="ml-2 inline-flex items-center">
+                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    </span>
                 </button>
                 <div id="m-events-sub" class="hidden pl-8 space-y-1">
-                <a id="m-events-regular" href="https://dodreamga.com/pages/better-together-3-1" class="block py-2 text-gray-600 hover:text-blue-600">Regular Meetings</a>
-                <a id="m-events-seminar" href="https://dodreamga.com/pages/better-together-3-2" class="block py-2 text-gray-600 hover:text-blue-600">Seminars</a>
-                <a id="m-events-school"  href="https://dodreamga.com/pages/better-together-3-3" class="block py-2 text-gray-600 hover:text-blue-600">Classes</a>
-                <a id="m-events-special" href="https://dodreamga.com/pages/better-together-3-4" class="block py-2 text-gray-600 hover:text-blue-600">Special Events</a>
+                    <a id="m-events-regular" href="https://dodreamga.com/pages/better-together-3-1" class="block py-2 text-gray-600 hover:text-blue-600">Regular Meetings</a>
+                    <a id="m-events-seminar" href="https://dodreamga.com/pages/better-together-3-2" class="block py-2 text-gray-600 hover:text-blue-600">Seminars</a>
+                    <a id="m-events-school"  href="https://dodreamga.com/pages/better-together-3-3" class="block py-2 text-gray-600 hover:text-blue-600">Classes</a>
+                    <a id="m-events-special" href="https://dodreamga.com/pages/better-together-3-4" class="block py-2 text-gray-600 hover:text-blue-600">Special Events</a>
                 </div>
-
-                <!-- Next Gen (submenu) -->
+                <!-- Next Gen -->
                 <button id="m-nextgen-toggle"
                 class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
-                <span id="m-nextgen">Next Gen</span>
-                <span class="ml-2 inline-flex items-center">
-                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
-                </span>
+                    <span id="m-nextgen">Next Gen</span>
+                    <span class="ml-2 inline-flex items-center">
+                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    </span>
                 </button>
                 <div id="m-nextgen-sub" class="hidden pl-8 space-y-1">
-                <a id="m-nextgen-ss"       href="https://dodreamga.com/pages/better-together-4-1" class="block py-2 text-gray-600 hover:text-blue-600">Sunday School</a>
-                <a id="m-nextgen-em"       href="https://dodreamga.com/pages/better-together-4-2" class="block py-2 text-gray-600 hover:text-blue-600">DREAM EM</a>
-                <a id="m-nextgen-youth"    href="https://dodreamga.com/pages/better-together-4-3" class="block py-2 text-gray-600 hover:text-blue-600">Young Adult</a>
-                <a id="m-nextgen-gallery"  href="https://dodreamga.com/pages/better-together-4-4" class="block py-2 text-gray-600 hover:text-blue-600">Gallery</a>
+                    <a id="m-nextgen-ss"       href="https://dodreamga.com/pages/better-together-4-1" class="block py-2 text-gray-600 hover:text-blue-600">Sunday School</a>
+                    <a id="m-nextgen-em"       href="https://dodreamga.com/pages/better-together-4-2" class="block py-2 text-gray-600 hover:text-blue-600">DREAM EM</a>
+                    <a id="m-nextgen-youth"    href="https://dodreamga.com/pages/better-together-4-3" class="block py-2 text-gray-600 hover:text-blue-600">Young Adult</a>
+                    <a id="m-nextgen-gallery"  href="https://dodreamga.com/pages/better-together-4-4" class="block py-2 text-gray-600 hover:text-blue-600">Gallery</a>
                 </div>
-
-                <!-- SMD344 (submenu) -->
+                <!-- SMD344 -->
                 <button id="m-smd-toggle"
                 class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
-                <span id="m-smd">SMD344</span>
-                <span class="ml-2 inline-flex items-center">
-                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
-                </span>
+                    <span id="m-smd">SMD344</span>
+                    <span class="ml-2 inline-flex items-center">
+                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    </span>
                 </button>
                 <div id="m-smd-sub" class="hidden pl-8 space-y-1">
-                <a id="m-smd-missionary"   href="https://dodreamga.com/pages/better-together-5-1" class="block py-2 text-gray-600 hover:text-blue-600">Missionaries</a>
-                <a id="m-smd-discipleship" href="https://dodreamga.com/pages/better-together-5-2" class="block py-2 text-gray-600 hover:text-blue-600">Discipleship</a>
+                    <a id="m-smd-missionary"   href="https://dodreamga.com/pages/better-together-5-1" class="block py-2 text-gray-600 hover:text-blue-600">Missionaries</a>
+                    <a id="m-smd-discipleship" href="https://dodreamga.com/pages/better-together-5-2" class="block py-2 text-gray-600 hover:text-blue-600">Discipleship</a>
                 </div>
             </div>
         </div>
@@ -275,24 +257,15 @@
                     <p id="hero-subtitle" class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                         And God blessed them. And God said to them, “Be fruitful and multiply and fill the earth and subdue it, and have dominion over the fish of the sea and over the birds of the heavens and over every living thing that moves on the earth.
                     </p>
-                <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
-                    </div>
+                    <div class="mt-10 sm:flex sm:justify-center lg:justify-start"></div>
                 </div>
                 <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
                     <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
                         <div class="relative block w-full bg-white overflow-hidden rounded-lg">
                             <div class="youtube-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                <iframe
-                                    class="absolute top-0 left-0 w-full h-full"
-                                    src="https://www.youtube.com/embed/4WGic-kv7GY?autoplay=0&rel=0&modestbranding=1"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
-                            <div class="absolute inset-0 bg-blue-600 opacity-20"></div>
-                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
-                                <h3 class="text-xl font-semibold text-white">"For where two or three gather in my name, there am I with them." - Matthew 18:20</h3>
+                                <div class="youtube-video">
+                                    <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -313,7 +286,7 @@
             <div class="mt-6 sm:mt-10">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/3 mb-6 md:mb-0">
-                        <img src="pastor.png" alt="Pastor">
+                        <img src="./assets/img/pastor.png" alt="Pastor">
                     </div>
                     <div class="md:w-2/3 md:pl-12">
                         <blockquote class="relative">
@@ -397,7 +370,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
                         <div class="p-6">
                             <div class="flex items-center">
@@ -460,17 +432,6 @@
 
                     <div class="relative">
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="book-open"></i>
-                        </div>
-                        <p id="min-ss-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Sunday School</p>
-                        <p id="min-ss-body" class="mt-2 ml-16 text-base text-gray-500">
-                            Classes for all ages where we study God's Word together. 
-                            From toddlers to seniors, there's a class to help you grow spiritually.
-                        </p>
-                    </div>
-
-                    <div class="relative">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
                             <i data-feather="heart"></i>
                         </div>
                         <p id="min-women-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Women's Ministry</p>
@@ -488,6 +449,17 @@
                         <p id="min-men-body" class="mt-2 ml-16 text-base text-gray-500">
                             Monthly gatherings where men connect over food, fellowship and God's Word, 
                             encouraging each other to live out biblical manhood.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="book-open"></i>
+                        </div>
+                        <p id="min-ss-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Discipleship Training</p>
+                        <p id="min-ss-body" class="mt-2 ml-16 text-base text-gray-500">
+                            Classes for all ages where we study God's Word together. 
+                            From toddlers to seniors, there's a class to help you grow spiritually.
                         </p>
                     </div>
 
@@ -639,7 +611,6 @@
             </div>
         </div>
     </footer>
-
     <script>
         // Language toggle
         const languageToggle = document.getElementById('language-toggle');
@@ -652,7 +623,6 @@
             'hero-subtitle': { 
                 en: '"And God blessed them. And God said to them, “Be fruitful and multiply and fill the earth and subdue it, and have dominion over the fish of the sea and over the birds of the heavens and over every living thing that moves on the earth." (Genesis 1:28)', 
                 ko: '"하나님이 그들에게 복을 주시며 그들에게 이르시되 생육하고 번성하여 땅에 충만하라, 땅을 정복하라, 바다의 고기와 공중의 새와 땅에 움직이는 모든 생물을 다스리라 하시니라." (창세기 1:28)' },
-            
             // PC Nav
             'nav-home':     { en: 'Home',         ko: '홈' },
             'nav-about':    { en: 'About',        ko: '교회 소개' },
@@ -677,7 +647,6 @@
             'nav-smd':      { en: 'SMD344',       ko: 'SMD344 선교단' },
                 'smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
                 'smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
-
             // Mobile Nav
             'm-home':    { en: 'Home',        ko: '홈' },
             'm-about':   { en: 'About',        ko: '교회 소개' },
@@ -702,7 +671,6 @@
             'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
                 'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
                 'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
-
             // Welcome Section
             'welcome': { en: 'WELCOME', ko: '환영합니다'},
             'welcome-title': { en: 'A Message from Pastor David Kim', ko: '김인승 목사님의 인사말' },
@@ -710,7 +678,6 @@
                              ko: '사랑하는 성도님들, DoDream 한인 침례교회에 오신 것을 진심으로 환영합니다. "DoDream"은 한국어로 "기도하다"라는 뜻으로, 모든 민족을 위한 기도의 집이 되고자 하는 우리의 비전을 담고 있습니다. 버포드에서 우리는 한인과 모든 하나님을 찾는 이들이 믿음 안에서 성장하고, 사랑으로 섬기며, 진리와 성령으로 예배할 수 있는 영적인 집을 만들고자 노력하고 있습니다. 처음 방문하신 분이든 교회 가정을 찾고 계신 분이든, 이 믿음의 여정에 함께 하시길 초대합니다.' },
             'pastor': { en: 'Rev. David Kim', ko: '김인승 목사님'},
             'pastor-sub': { en: 'Senior Pastor', ko: '담임 목사'},
-
             // Service Times
             'service': { en: 'JOIN US', ko: '함께해요'},
             'service-title': { en: 'Our Weekly Services', ko: '주일 예배 시간' },
@@ -733,7 +700,7 @@
                 en: '<span class="font-bold text-blue-600">12:00 PM</span> - Lunch & Fellowship<br><span class="font-bold text-blue-600">1:00 PM</span> - Bible Study & Activities<br>A joyful time of learning, sharing, and growing in faith together.',
                 ko: '<span class="font-bold text-blue-600">12:00 PM</span> - 점심 및 교제<br><span class="font-bold text-blue-600">1:00 PM</span> - 성경공부 & 활동<br>함께 배우고 나누며 믿음으로 자라가는 시간입니다.'
             },
-
+            // Find Us Section
             'findus-title': { en: 'Find Us', ko: '찾아오시는 길' },
             'findus-heading': { en: 'Visit DoDream Church', ko: '두드림 교회 방문' },
             'findus-location-title': { en: 'Our Location', ko: '교회 위치' },
@@ -741,54 +708,44 @@
             'findus-sunday': { en: 'Sunday Worship', ko: '주일 예배' },
             'findus-youth': { en: 'Sunday Youth Meeting', ko: '주일 유스 모임' },
             'findus-thu': { en: 'Thursday Praise', ko: '목요 찬양' },
-
             // Ministries Section
             'ministries-title':    { en: 'Get Involved', ko: '함께 섬겨요' },
             'ministries-heading':  { en: 'Our Ministries', ko: '사역 소개' },
             'ministries-subtitle': { en: "There's a place for everyone to serve", ko: '모든 분을 위한 섬김의 자리가 있습니다'},
-
             'min-worship-title': { en: 'Worship Team', ko: '찬양팀' },
             'min-worship-body': { 
             en: "Our worship team leads the congregation in vibrant praise and worship each Sunday. Whether you sing or play an instrument, we'd love for you to join us in magnifying the Lord.",
             ko: '매 주일 찬양과 예배로 회중을 인도합니다. 노래나 악기로 함께 섬기길 원하신다면, 주님을 높이는 이 사역에 함께하세요.'},
-
             'min-youth-title': { en: 'Youth Ministry', ko: '청소년 사역' },
             'min-youth-body': { 
             en: 'Engaging middle school through college-age students with Bible study, fellowship, and fun activities that help them grow in their relationship with Christ.',
             ko: '초·중·고등학생부터 대학생까지 말씀, 교제, 활동을 통해 그리스도 안에서 성장하도록 돕습니다.'},
-
             'min-ss-title': { en: 'Discipleship Training', ko: '제자훈련' },
             'min-ss-body': { 
             en: "Weekly training to follow Jesus in everyday life—Scripture, prayer, and practice for real-life discipleship.",
             ko: '말씀·기도·실천을 통해 예수님을 따르는 삶을 배우는 주간 훈련입니다. 일상에서 제자로 살아가도록 함께 훈련합니다.'},
-
             'min-women-title': { en: "Women’s Mission Society", ko: '여선교회' },
             'min-women-body': { 
             en: "A community of women serving through prayer, care, and mission support—growing together in God's Word.",
             ko: '기도와 돌봄, 선교후원을 통해 함께 성장하고 서로를 격려하는 자매들의 공동체입니다.'},
-
             'min-men-title': { en: "Men’s Mission Society", ko: '남선교회' },
             'min-men-body': { 
             en: "Men united for service and mission—fellowship, ministry projects, and spiritual growth in God’s Word.",
             ko: '섬김과 선교를 위해 하나 된 형제들의 공동체입니다. 신앙 안에서 참된 남성됨을 실천합니다.'},
-
             'min-mission-title': { en: 'Missions', ko: '선교 사역' },
             'min-mission-body': { 
             en: 'Supporting missionaries locally and globally, with annual mission trips that allow our members to be the hands and feet of Jesus.',
             ko: '국내외 선교를 지원하며, 매년 선교 여행을 통해 예수님의 손과 발이 되어 복음을 전합니다.'},
-
             // Donation
             'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
             'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
         };
-
-        let currentLanguage = 'en';
-        
+        // Language Toggle EN/KR
+        let currentLanguage = 'en';       
         languageToggle.addEventListener('click', () => {
             currentLanguage = currentLanguage === 'en' ? 'ko' : 'en';
             updateLanguage();
         });
-
         function updateLanguage() {
             for (const [id, translations] of Object.entries(elementsToTranslate)) {
                 const el = document.getElementById(id);
@@ -801,16 +758,13 @@
             if (langBtn)  langBtn.textContent  = currentLanguage === 'en' ? '한글' : 'ENG';
             if (mLangBtn) mLangBtn.textContent = currentLanguage === 'en' ? '한글' : 'ENG';
         }
-
         // Initialize with English
         updateLanguage();
-
         // Mobile menu toggle
         document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
-
         // Vanta.js background
         VANTA.WAVES({
             el: "#vanta-bg",
@@ -827,7 +781,6 @@
             waveSpeed: 0.50,
             zoom: 0.80
         });
-
         // Initialize feather icons
         feather.replace();
         // Mobile menu toggle
@@ -856,8 +809,8 @@
             { btn: 'm-nextgen-toggle',  panel: 'm-nextgen-sub' },
             { btn: 'm-smd-toggle',      panel: 'm-smd-sub' }
         ];
-
-         const closeOthers = (exceptPanelId) => {
+        // Mobile Menu Close Other When New Opened
+        const closeOthers = (exceptPanelId) => {
             mobileAccordions.forEach(({ btn, panel }) => {
             if (panel !== exceptPanelId) {
                 const b = document.getElementById(btn);
@@ -870,7 +823,7 @@
             }
             });
         };
-
+        // Mobile Menu Dropdown
         mobileAccordions.forEach(({ btn, panel }) => {
             const b = document.getElementById(btn);
             const p = document.getElementById(panel);
@@ -896,6 +849,40 @@
                 if (chevWrap) chevWrap.classList.add('rotate-180');
             }
             });
+        });
+        /* Youtube */
+        $(document).ready(function() {
+        const apiKey = 'AIzaSyCsGt0RmRMHdgAsQA08GcTjUWKte9N6xAc';
+        const channelId = 'UC-YSiZ8LPKGur2MVHN95slQ';
+
+        // Fetch and embed YouTube video
+        const fetchVideo = async (targetElements) => {
+            try {
+                const response = await $.ajax({
+                    url: 'https://www.googleapis.com/youtube/v3/search',
+                    type: 'GET',
+                    data: {
+                        part: 'snippet',
+                        channelId: channelId,
+                        maxResults: 1,
+                        order: 'date',
+                        type: 'video',
+                        key: apiKey
+                    }
+                });
+
+                if (response.items.length > 0) {
+                    const videoId = response.items[0].id.videoId;
+                    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                    const iframe = `<iframe width="560" height="315" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>`;
+                    $(targetElements).html(iframe);
+                }
+            } catch (error) {
+                console.error('Error fetching YouTube video:', error);
+            }
+        };
+        // Usage: Fetch video once and apply to both elements
+        fetchVideo('.youtube-video, .youtube-mobile');
         });
     </script>
 </body>
