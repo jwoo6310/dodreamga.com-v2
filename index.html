@@ -1,20 +1,3 @@
-
-    <style>
-        .youtube-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-        }
-        .youtube-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,15 +28,14 @@
         }
     </style>
 </head>
-<body class="font-korean bg-gray-50">
+<body class="font-korean bg-gray-50 -mt-14 sm:mt-0">
     <!-- Navigation -->
     <nav class="bg-white shadow-sm fixed w-full z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <div class="flex items-center">
+                <div class="hidden md:flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <i data-feather="home" class="text-blue-600"></i>
-                        <span class="ml-2 font-serif-korean font-bold text-blue-600">DoDream</span>
+                        <img src="logo.png" alt="DoDream Church Logo" class="h-12 w-auto">
                     </div>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
@@ -180,54 +162,120 @@
                 </div>
             </div>
         </div>
-    <!-- Mobile menu -->
-    <div class="md:hidden flex justify-between items-center px-4 py-2 bg-white">
-        <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
-            <i data-feather="menu"></i>
-        </button>
-        <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-blue-500 text-blue-600 hover:bg-blue-50 transition-colors">한글/ENG</button>
-    </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden flex items-center justify-between px-4 py-2 bg-white">
+            <div class="flex-shrink-0 flex items-center">
+                <img src="logo.png" alt="DoDream Church Logo" class="h-12 w-auto">
+            </div>
+            <div class="flex items-center space-x-2">
+                <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-blue-500 text-blue-600 hover:bg-blue-50 transition-colors">한글/ENG</button>
+                <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>        
+            </div>
+        </div>
+        
+        <!-- Mobile menu with submenus -->
         <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1">
-                <a id="m-home" href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
-                <a id="m-about" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
-                <a id="m-community" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Our Community</a>
-                <a id="m-events" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Events</a>
-                <a id="m-nextgen" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Next Gen</a>
-                <a id="m-smd" href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">SMD344</a>
-            </div>
-            <div class="pt-4 pb-3 border-t border-gray-200 px-4">
-                <a href="#" class="block w-full px-4 py-3 text-center text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md">
-                    <i data-feather="calendar" class="inline mr-2"></i> Visit Us
+
+                <!-- Home (no submenu) -->
+                <a id="m-home" href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                Home
                 </a>
+
+                <!-- About (submenu) -->
+                <button id="m-about-toggle"
+                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                <span id="m-about">About</span>
+                <span class="ml-2 inline-flex items-center">
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                </span>
+                </button>
+                <div id="m-about-sub" class="hidden pl-8 space-y-1">
+                <a id="m-about-greeting"  href="https://dodreamga.com/pages/better-together-1-1" class="block py-2 text-gray-600 hover:text-blue-600">Greeting</a>
+                <a id="m-about-vision"    href="https://dodreamga.com/pages/better-together-1-2" class="block py-2 text-gray-600 hover:text-blue-600">Vision</a>
+                <a id="m-about-worship"   href="https://dodreamga.com/pages/better-together-1-3" class="block py-2 text-gray-600 hover:text-blue-600">Worship Schedule</a>
+                <a id="m-about-location"  href="https://dodreamga.com/pages/better-together-1-4" class="block py-2 text-gray-600 hover:text-blue-600">Directions</a>
+                </div>
+
+                <!-- Our Community (submenu) -->
+                <button id="m-community-toggle"
+                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                <span id="m-community">Our Community</span>
+                <span class="ml-2 inline-flex items-center">
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                </span>
+                </button>
+                <div id="m-community-sub" class="hidden pl-8 space-y-1">
+                <a id="m-community-pos"     href="https://dodreamga.com/pages/better-together-2-1" class="block py-2 text-gray-600 hover:text-blue-600">POS Groups</a>
+                <a id="m-community-school"  href="https://dodreamga.com/pages/better-together-2-2" class="block py-2 text-gray-600 hover:text-blue-600">Korean School</a>
+                <a id="m-community-dept"    href="https://dodreamga.com/pages/better-together-2-3" class="block py-2 text-gray-600 hover:text-blue-600">Departments</a>
+                </div>
+
+                <!-- Events (submenu) -->
+                <button id="m-events-toggle"
+                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                <span id="m-events">Events</span>
+                <span class="ml-2 inline-flex items-center">
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                </span>
+                </button>
+                <div id="m-events-sub" class="hidden pl-8 space-y-1">
+                <a id="m-events-regular" href="https://dodreamga.com/pages/better-together-3-1" class="block py-2 text-gray-600 hover:text-blue-600">Regular Meetings</a>
+                <a id="m-events-seminar" href="https://dodreamga.com/pages/better-together-3-2" class="block py-2 text-gray-600 hover:text-blue-600">Seminars</a>
+                <a id="m-events-school"  href="https://dodreamga.com/pages/better-together-3-3" class="block py-2 text-gray-600 hover:text-blue-600">Classes</a>
+                <a id="m-events-special" href="https://dodreamga.com/pages/better-together-3-4" class="block py-2 text-gray-600 hover:text-blue-600">Special Events</a>
+                </div>
+
+                <!-- Next Gen (submenu) -->
+                <button id="m-nextgen-toggle"
+                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                <span id="m-nextgen">Next Gen</span>
+                <span class="ml-2 inline-flex items-center">
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                </span>
+                </button>
+                <div id="m-nextgen-sub" class="hidden pl-8 space-y-1">
+                <a id="m-nextgen-ss"       href="https://dodreamga.com/pages/better-together-4-1" class="block py-2 text-gray-600 hover:text-blue-600">Sunday School</a>
+                <a id="m-nextgen-em"       href="https://dodreamga.com/pages/better-together-4-2" class="block py-2 text-gray-600 hover:text-blue-600">DREAM EM</a>
+                <a id="m-nextgen-youth"    href="https://dodreamga.com/pages/better-together-4-3" class="block py-2 text-gray-600 hover:text-blue-600">Young Adult</a>
+                <a id="m-nextgen-gallery"  href="https://dodreamga.com/pages/better-together-4-4" class="block py-2 text-gray-600 hover:text-blue-600">Gallery</a>
+                </div>
+
+                <!-- SMD344 (submenu) -->
+                <button id="m-smd-toggle"
+                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                <span id="m-smd">SMD344</span>
+                <span class="ml-2 inline-flex items-center">
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                </span>
+                </button>
+                <div id="m-smd-sub" class="hidden pl-8 space-y-1">
+                <a id="m-smd-missionary"   href="https://dodreamga.com/pages/better-together-5-1" class="block py-2 text-gray-600 hover:text-blue-600">Missionaries</a>
+                <a id="m-smd-discipleship" href="https://dodreamga.com/pages/better-together-5-2" class="block py-2 text-gray-600 hover:text-blue-600">Discipleship</a>
+                </div>
             </div>
-</div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <div id="vanta-bg" class="relative pt-16 pb-32 overflow-hidden">
+    <div id="vanta-bg" class="relative pt-16 pb-0 sm:pt-16 sm:pb-0 overflow-hidden">
         <div class="hero-gradient absolute inset-0"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-6">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left mt-4 sm:mt-0">
                     <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                        <span id="hero-title-1" class="block font-serif-korean">DoDream 교회</span>
-                        <span id="hero-title-2" class="block text-blue-600">Korean American Baptist Church</span>
+                        <span id="hero-title-1" class="block font-serif-korean">DoDream Baptist Church</span>
+                        <span id="hero-title-2" class="block text-blue-600">God saw everything that He had made</span>
+                        <span id="hero-title-3" class="block text-blue-600">and behold,</span>
+                        <span id="hero-title-4" class="block text-blue-600">it was very good</span>
                     </h1>
                     <p id="hero-subtitle" class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        Where faith meets community in Buford, Georgia. Join us as we follow Christ together.
+                        And God blessed them. And God said to them, “Be fruitful and multiply and fill the earth and subdue it, and have dominion over the fish of the sea and over the birds of the heavens and over every living thing that moves on the earth.
                     </p>
-<div class="mt-10 sm:flex sm:justify-center lg:justify-start">
-                        <div class="rounded-md shadow">
-                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
-                                Sunday Service
-                            </a>
-                        </div>
-                        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                                Our Ministries
-                            </a>
-                        </div>
+                <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                     </div>
                 </div>
                 <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
@@ -248,22 +296,21 @@
                             </div>
                         </div>
                     </div>
-</div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Welcome Section -->
-    <div class="py-12 bg-white">
+    <div class="pt-0 pb-8 sm:pt-6 sm:pb-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
                 <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Welcome</h2>
                     <p id="welcome-title" class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         A Message from Pastor David Kim
                     </p>
-</div>
-
-            <div class="mt-10">
+            </div>
+            <div class="mt-6 sm:mt-10">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/3 mb-6 md:mb-0">
                         <img class="rounded-lg shadow-xl" src="http://static.photos/people/640x360/101" alt="Pastor David Kim">
@@ -281,7 +328,7 @@
                                 Whether you're visiting for the first time or looking for a church family, we invite you to join us 
                                 on this journey of faith.
                             </p>
-<footer class="mt-4">
+                            <footer class="mt-4">
                                 <div class="flex items-center">
                                     <div class="ml-4">
                                         <div class="text-base font-medium text-gray-900">Rev. David Kim</div>
@@ -297,7 +344,7 @@
     </div>
 
     <!-- Service Times -->
-    <div class="py-12 bg-gray-50">
+    <div class="py-8 sm:py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
                 <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Join Us</h2>
@@ -307,9 +354,8 @@
                 <p id="service-subtitle" class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
                     All are welcome to worship with us
                 </p>
-</div>
-
-            <div class="mt-10">
+            </div>
+            <div class="mt-6 sm:mt-10">
                 <div class="grid gap-10 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10">
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
                         <div class="p-6">
@@ -318,20 +364,19 @@
                                     <i data-feather="sun" class="h-6 w-6 text-white"></i>
                                 </div>
                                 <div class="ml-5">
-                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Sunday Morning Worship</h3>
-                                    <p class="mt-1 text-sm text-gray-500">Main Service</p>
+                                    <h3 id="sun-title" class="text-lg leading-6 font-medium text-gray-900">Sunday Morning Worship</h3>
+                                    <p id="sun-sub" class="mt-1 text-sm text-gray-500">Main Service</p>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <p class="text-base text-gray-500">
+                                <p id="sun-body" class="text-base text-gray-500">
                                     <span class="font-bold text-blue-600">11:00 AM</span> - Sunday School for all ages<br>
-                                    <span class="font-bold text-blue-600">12:00 PM</span> - Main Worship Service<br>
-                                    Bilingual (Korean/English) worship with powerful preaching and vibrant praise
+                                    <span class="font-bold text-blue-600">11:00 AM</span> - Main/EM Worship Service<br>
+                                    Separate services in Korean and English (EM) with powerful preaching and vibrant praise.
                                 </p>
                             </div>
                         </div>
                     </div>
-
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
                         <div class="p-6">
                             <div class="flex items-center">
@@ -339,15 +384,15 @@
                                     <i data-feather="moon" class="h-6 w-6 text-white"></i>
                                 </div>
                                 <div class="ml-5">
-                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Wednesday Bible Study</h3>
-                                    <p class="mt-1 text-sm text-gray-500">Midweek Gathering</p>
+                                    <h3 id="thu-title" class="text-lg leading-6 font-medium text-gray-900">Thursday Praise Night</h3>
+                                    <p id="thu-sub" class="mt-1 text-sm text-gray-500">Midweek Praise & Joy</p>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <p class="text-base text-gray-500">
-                                    <span class="font-bold text-blue-600">7:30 PM</span> - Prayer Meeting<br>
-                                    <span class="font-bold text-blue-600">8:00 PM</span> - Bible Study<br>
-                                    Deep dive into God's Word with practical application
+                                <p id="thu-body" class="text-base text-gray-500">
+                                    <span class="font-bold text-blue-600">7:00 PM</span> - Praise Team Rehearsal<br>
+                                    <span class="font-bold text-blue-600">8:00 PM</span> - One Hour of Praise<br>
+                                    Join us for an uplifting night of worship led by our praise team.
                                 </p>
                             </div>
                         </div>
@@ -360,15 +405,15 @@
                                     <i data-feather="users" class="h-6 w-6 text-white"></i>
                                 </div>
                                 <div class="ml-5">
-                                    <h3 class="text-lg leading-6 font-medium text-gray-900">Friday Youth Fellowship</h3>
-                                    <p class="mt-1 text-sm text-gray-500">Young Disciples</p>
+                                    <h3 id="youth-title" class="text-lg leading-6 font-medium text-gray-900">Sunday Youth Fellowship</h3>
+                                    <p id="youth-sub" class="mt-1 text-sm text-gray-500">Young Disciples</p>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <p class="text-base text-gray-500">
-                                    <span class="font-bold text-blue-600">7:00 PM</span> - Dinner & Fellowship<br>
-                                    <span class="font-bold text-blue-600">7:30 PM</span> - Worship & Message<br>
-                                    Energetic gathering for middle school to college age
+                                <p id="youth-body" class="text-base text-gray-500">
+                                    <span class="font-bold text-blue-600">12:00 PM</span> - Lunch & Fellowship<br>
+                                    <span class="font-bold text-blue-600">1:00 PM</span> - Bible Study & Activities<br>
+                                    A joyful time of learning, sharing, and growing in faith together.
                                 </p>
                             </div>
                         </div>
@@ -377,192 +422,26 @@
             </div>
         </div>
     </div>
-
-    <!-- Sermon Highlights -->
-    <div class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Recent Messages</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Sermon Highlights
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    Refresh your soul with God's Word
-                </p>
-            </div>
-
-            <div class="mt-10 grid gap-8 lg:grid-cols-3">
-                <div class="sermon-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
-                    <div class="relative pb-2/3">
-                        <img class="absolute h-full w-full object-cover" src="http://static.photos/abstract/640x360/23" alt="Sermon thumbnail">
-                        <div class="absolute inset-0 bg-blue-600 opacity-30"></div>
-                        <div class="absolute top-4 right-4">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                                New
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0">
-                                <img class="h-10 w-10 rounded-full" src="http://static.photos/people/200x200/101" alt="Pastor David Kim">
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm font-medium text-gray-900">Pastor David Kim</p>
-                                <div class="flex space-x-1 text-sm text-gray-500">
-                                    <time datetime="2023-06-04">June 4, 2023</time>
-                                    <span aria-hidden="true">&middot;</span>
-                                    <span>42 min</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="text-lg font-medium text-gray-900">The Power of Persistent Prayer</h3>
-                            <p class="mt-2 text-sm text-gray-500">
-                                Exploring Luke 18:1-8 and how Jesus teaches us to pray without giving up...
-                            </p>
-                        </div>
-                        <div class="mt-6 flex justify-between items-center">
-                            <div class="flex">
-                                <a href="#" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
-                                    <i data-feather="play" class="mr-1.5 h-4 w-4"></i>
-                                    Watch
-                                </a>
-                                <a href="#" class="ml-4 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
-                                    <i data-feather="download" class="mr-1.5 h-4 w-4"></i>
-                                    Download
-                                </a>
-                            </div>
-                            <div class="flex">
-                                <button type="button" class="p-1 rounded-full text-gray-400 hover:text-blue-600 focus:outline-none">
-                                    <i data-feather="share-2"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sermon-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
-                    <div class="relative pb-2/3">
-                        <img class="absolute h-full w-full object-cover" src="http://static.photos/nature/640x360/45" alt="Sermon thumbnail">
-                        <div class="absolute inset-0 bg-blue-600 opacity-30"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0">
-                                <img class="h-10 w-10 rounded-full" src="http://static.photos/people/200x200/102" alt="Guest Speaker">
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm font-medium text-gray-900">Rev. John Park</p>
-                                <div class="flex space-x-1 text-sm text-gray-500">
-                                    <time datetime="2023-05-28">May 28, 2023</time>
-                                    <span aria-hidden="true">&middot;</span>
-                                    <span>38 min</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="text-lg font-medium text-gray-900">Living as Salt and Light</h3>
-                            <p class="mt-2 text-sm text-gray-500">
-                                Matthew 5:13-16 - How believers can influence the world for Christ...
-                            </p>
-                        </div>
-                        <div class="mt-6 flex justify-between items-center">
-                            <div class="flex">
-                                <a href="#" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
-                                    <i data-feather="play" class="mr-1.5 h-4 w-4"></i>
-                                    Watch
-                                </a>
-                                <a href="#" class="ml-4 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
-                                    <i data-feather="download" class="mr-1.5 h-4 w-4"></i>
-                                    Download
-                                </a>
-                            </div>
-                            <div class="flex">
-                                <button type="button" class="p-1 rounded-full text-gray-400 hover:text-blue-600 focus:outline-none">
-                                    <i data-feather="share-2"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sermon-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
-                    <div class="relative pb-2/3">
-                        <img class="absolute h-full w-full object-cover" src="http://static.photos/abstract/640x360/67" alt="Sermon thumbnail">
-                        <div class="absolute inset-0 bg-blue-600 opacity-30"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0">
-                                <img class="h-10 w-10 rounded-full" src="http://static.photos/people/200x200/101" alt="Pastor David Kim">
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm font-medium text-gray-900">Pastor David Kim</p>
-                                <div class="flex space-x-1 text-sm text-gray-500">
-                                    <time datetime="2023-05-21">May 21, 2023</time>
-                                    <span aria-hidden="true">&middot;</span>
-                                    <span>45 min</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="text-lg font-medium text-gray-900">The Prodigal Son's Return</h3>
-                            <p class="mt-2 text-sm text-gray-500">
-                                Luke 15:11-32 - Understanding the Father's unconditional love...
-                            </p>
-                        </div>
-                        <div class="mt-6 flex justify-between items-center">
-                            <div class="flex">
-                                <a href="#" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
-                                    <i data-feather="play" class="mr-1.5 h-4 w-4"></i>
-                                    Watch
-                                </a>
-                                <a href="#" class="ml-4 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
-                                    <i data-feather="download" class="mr-1.5 h-4 w-4"></i>
-                                    Download
-                                </a>
-                            </div>
-                            <div class="flex">
-                                <button type="button" class="p-1 rounded-full text-gray-400 hover:text-blue-600 focus:outline-none">
-                                    <i data-feather="share-2"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-10 text-center">
-                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    View All Sermons
-                    <i data-feather="arrow-right" class="ml-2 h-4 w-4"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- Ministries -->
-    <div class="py-12 bg-gray-50">
+    <div class="py-8 sm:py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Get Involved</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 id="ministries-title" class="text-base text-blue-600 font-semibold tracking-wide uppercase">Get Involved</h2>
+                <p id="ministries-heading" class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                     Our Ministries
                 </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                <p id="ministries-subtitle" class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
                     There's a place for everyone to serve
                 </p>
             </div>
-
-            <div class="mt-10">
-                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+            <div class="mt-6 sm:mt-10">
+                <div class="space-y-6 sm:space-y-8 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-8">
                     <div class="relative">
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
                             <i data-feather="music"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Worship Team</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
+                        <p id="min-worship-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Worship Team</p>
+                        <p id="min-worship-body" class="mt-2 ml-16 text-base text-gray-500">
                             Our worship team leads the congregation in vibrant praise and worship each Sunday. 
                             Whether you sing or play an instrument, we'd love for you to join us in magnifying the Lord.
                         </p>
@@ -572,8 +451,8 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
                             <i data-feather="users"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Youth Ministry</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
+                        <p id="min-youth-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Youth Ministry</p>
+                        <p id="min-youth-body" class="mt-2 ml-16 text-base text-gray-500">
                             Engaging middle school through college-age students with Bible study, fellowship, 
                             and fun activities that help them grow in their relationship with Christ.
                         </p>
@@ -583,8 +462,8 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
                             <i data-feather="book-open"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Sunday School</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
+                        <p id="min-ss-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Sunday School</p>
+                        <p id="min-ss-body" class="mt-2 ml-16 text-base text-gray-500">
                             Classes for all ages where we study God's Word together. 
                             From toddlers to seniors, there's a class to help you grow spiritually.
                         </p>
@@ -594,8 +473,8 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
                             <i data-feather="heart"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Women's Ministry</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
+                        <p id="min-women-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Women's Ministry</p>
+                        <p id="min-women-body" class="mt-2 ml-16 text-base text-gray-500">
                             A sisterhood of women supporting each other through Bible studies, prayer meetings, 
                             and special events designed to encourage spiritual growth.
                         </p>
@@ -605,8 +484,8 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
                             <i data-feather="coffee"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Men's Fellowship</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
+                        <p id="min-men-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Men's Fellowship</p>
+                        <p id="min-men-body" class="mt-2 ml-16 text-base text-gray-500">
                             Monthly gatherings where men connect over food, fellowship and God's Word, 
                             encouraging each other to live out biblical manhood.
                         </p>
@@ -616,8 +495,8 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
                             <i data-feather="globe"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Missions</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
+                        <p id="min-mission-title" class="ml-16 text-lg leading-6 font-medium text-gray-900">Missions</p>
+                        <p id="min-mission-body" class="mt-2 ml-16 text-base text-gray-500">
                             Supporting missionaries locally and globally, with annual mission trips 
                             that allow our members to be the hands and feet of Jesus.
                         </p>
@@ -626,22 +505,20 @@
             </div>
         </div>
     </div>
-
     <!-- Location -->
-    <div class="py-12 bg-white">
+    <div class="py-8 sm:py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Find Us</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 id="findus-title" class="text-base text-blue-600 font-semibold tracking-wide uppercase">Find Us</h2>
+                <p id="findus-heading" class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                     Visit DoDream Church
                 </p>
             </div>
-
-            <div class="mt-10 flex flex-col md:flex-row">
+            <div class="mt-6 sm:mt-10 flex flex-col md:flex-row">
                 <div class="md:w-1/2 mb-6 md:mb-0">
                     <div class="bg-white shadow-md rounded-lg overflow-hidden">
                         <div class="p-6">
-                            <h3 class="text-lg font-medium text-gray-900">Our Location</h3>
+                            <h3 id="findus-location-title" class="text-lg font-medium text-gray-900">Our Location</h3>
                             <div class="mt-4">
                                 <div class="flex items-start">
                                     <div class="flex-shrink-0">
@@ -649,7 +526,7 @@
                                     </div>
                                     <div class="ml-3">
                                         <p class="text-base text-gray-600">
-                                            123 Faith Avenue<br>
+                                            1705 Enterprise Dr<br>
                                             Buford, GA 30518<br>
                                             United States
                                         </p>
@@ -660,7 +537,7 @@
                                         <i data-feather="phone" class="h-5 w-5 text-blue-600"></i>
                                     </div>
                                     <div class="ml-3">
-                                        <p class="text-base text-gray-600">(770) 123-4567</p>
+                                        <p class="text-base text-gray-600">(404) 944-9821</p>
                                     </div>
                                 </div>
                                 <div class="mt-4 flex items-start">
@@ -668,24 +545,24 @@
                                         <i data-feather="mail" class="h-5 w-5 text-blue-600"></i>
                                     </div>
                                     <div class="ml-3">
-                                        <p class="text-base text-gray-600">info@dodreamchurch.org</p>
+                                        <p class="text-base text-gray-600">dodreamgeorgia@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="mt-6">
-                                <h3 class="text-lg font-medium text-gray-900">Service Times</h3>
+                                <h3 id="findus-servicetimes-title" class="text-lg font-medium text-gray-900">Service Times</h3>
                                 <div class="mt-4">
                                     <div class="flex items-center justify-between py-2 border-b border-gray-200">
-                                        <p class="text-base text-gray-600">Sunday School</p>
+                                        <p id="findus-sunday" class="text-base text-gray-600">Sunday Worship</p>
                                         <p class="text-base font-medium text-gray-900">11:00 AM</p>
                                     </div>
                                     <div class="flex items-center justify-between py-2 border-b border-gray-200">
-                                        <p class="text-base text-gray-600">Sunday Worship</p>
-                                        <p class="text-base font-medium text-gray-900">12:00 PM</p>
+                                        <p id="findus-youth" class="text-base text-gray-600">Sunday Youth Meeting</p>
+                                        <p class="text-base font-medium text-gray-900">1:00 PM</p>
                                     </div>
                                     <div class="flex items-center justify-between py-2">
-                                        <p class="text-base text-gray-600">Wednesday Prayer</p>
-                                        <p class="text-base font-medium text-gray-900">7:30 PM</p>
+                                        <p id="findus-thu" class="text-base text-gray-600">Thursday Praise</p>
+                                        <p class="text-base font-medium text-gray-900">8:00 PM</p>
                                     </div>
                                 </div>
                             </div>
@@ -694,116 +571,49 @@
                 </div>
                 <div class="md:w-1/2 md:pl-8">
                     <div class="rounded-lg overflow-hidden shadow-md h-full">
-                        <iframe class="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.072119058791!2d-84.00972268478646!3d33.98538098062152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a5d5b5d5b5d5%3A0x5d5d5d5d5d5d5d5d!2sBuford%2C%20GA!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe class="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.791389967094!2d-84.00693249999999!3d34.1004842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5975d1e288a51%3A0xca7fe880cd94d216!2z65GQ65Oc66a8IOy5qOuhgOq1kO2ajCBEb0RyZWFtIEJhcHRpc3QgQ2h1cmNo!5e0!3m2!1sen!2sus!4v1760911078886!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Newsletter -->
+    <!-- Donation Information -->
     <div class="bg-blue-700">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 sm:py-12 lg:py-16 lg:px-8 lg:flex lg:items-center">
             <div class="lg:w-0 lg:flex-1">
-                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                    Stay Connected
+                <h2 id="donation-title" class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                    Giving & Support
                 </h2>
-                <p class="mt-3 max-w-3xl text-lg leading-6 text-blue-200">
-                    Sign up for our newsletter to receive updates and event information.
+                <p id="donation-subtitle" class="mt-3 max-w-3xl text-lg leading-6 text-blue-200">
+                    Support our ministry through your generous donations
                 </p>
             </div>
             <div class="mt-8 lg:mt-0 lg:ml-8">
-                <form class="sm:flex">
-                    <label for="email-address" class="sr-only">Email address</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required class="w-full px-5 py-3 border border-transparent placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:outline-none sm:max-w-xs rounded-md" placeholder="Enter your email">
-                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                        <button type="submit" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            Subscribe
-                        </button>
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-white">Venmo</h3>
+                        <p class="mt-2 text-blue-200">@Dodream344</p>
+                        <p class="mt-1 text-blue-200">Phone: 678-343-5799</p>
                     </div>
-                </form>
-                <p class="mt-3 text-sm text-blue-200">
-                    We care about your data. Read our <a href="#" class="text-white font-medium underline">Privacy Policy</a>.
-                </p>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-white">Zelle</h3>
+                        <p class="mt-2 text-blue-200">NCC</p>
+                        <p class="mt-1 text-blue-200">Phone: 404-944-9821</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg sm:col-span-2">
+                        <h3 class="text-lg font-medium text-white">Mailing Address</h3>
+                        <p class="mt-2 text-blue-200">3415 Smithtown Road</p>
+                        <p class="text-blue-200">Suwanee, Georgia 30024</p>
+                        <p class="text-blue-200">U.S.A</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <!-- Footer -->
     <footer class="bg-gray-800">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">About</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Our Beliefs</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Our Pastor</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Our History</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Our Vision</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Ministries</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Adult Ministry</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Youth Ministry</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Children's Ministry</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Missions</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Resources</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Sermons</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Devotionals</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Bible Reading Plans</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Connect</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Prayer Requests</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Give Online</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-400 hover:text-white">Volunteer</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-                <div class="flex space-x-6 md:order-2">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 sm:py-12">
+            <div class="flex justify-center space-x-6 md:order-2">
                     <a href="#" class="text-gray-400 hover:text-white">
                         <span class="sr-only">Facebook</span>
                         <i data-feather="facebook" class="h-6 w-6"></i>
@@ -820,21 +630,28 @@
                         <span class="sr-only">YouTube</span>
                         <i data-feather="youtube" class="h-6 w-6"></i>
                     </a>
-                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                
                 <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                    &copy; 2023 DoDream Korean American Baptist Church. All rights reserved.
+                    &copy; 2025 DoDream Baptist Church. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
+
     <script>
         // Language toggle
         const languageToggle = document.getElementById('language-toggle');
         const elementsToTranslate = {
             // Hero Section
-            'hero-title-1': { en: 'DoDream 교회', ko: 'DoDream Church' },
-            'hero-title-2': { en: 'Korean American Baptist Church', ko: '한인 침례교회' },
-            'hero-subtitle': { en: 'Where faith meets community in Buford, Georgia. Join us as we follow Christ together.', ko: '조지아 주 버포드에서 믿음과 교제가 만나는 곳. 함께 그리스도를 따르는 교회입니다.' },
+            'hero-title-1': { en: 'DoDream Church', ko: '두드림 침례교회' },
+            'hero-title-2': { en: 'Worshiping as God’s children, building', ko: '아들되어 예배하고 ' },
+            'hero-title-3': { en: 'a better world', ko: '제자로 좋은 세상' },
+            'hero-title-4': { en: 'as His disciples', ko: '만들어 갑니다' },
+            'hero-subtitle': { 
+                en: '"And God blessed them. And God said to them, “Be fruitful and multiply and fill the earth and subdue it, and have dominion over the fish of the sea and over the birds of the heavens and over every living thing that moves on the earth." (Genesis 1:28)', 
+                ko: '"하나님이 그들에게 복을 주시며 그들에게 이르시되 생육하고 번성하여 땅에 충만하라, 땅을 정복하라, 바다의 고기와 공중의 새와 땅에 움직이는 모든 생물을 다스리라 하시니라." (창세기 1:28)' },
             
             // PC Nav
             'nav-home':     { en: 'Home',         ko: '홈' },
@@ -884,7 +701,7 @@
                 'm-nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
             'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
                 'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
+                'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
 
             // Welcome Section
             'welcome-title': { en: 'A Message from Pastor David Kim', ko: '김다윗 목사님의 인사말' },
@@ -893,11 +710,73 @@
             
             // Service Times
             'service-title': { en: 'Our Weekly Services', ko: '주일 예배 시간' },
-            'service-subtitle': { en: 'All are welcome to worship with us', ko: '모두를 환영합니다' }
+            'service-subtitle': { en: 'All are welcome to worship with us', ko: '모두를 환영합니다' },
+            'sun-title': { en: 'Sunday Morning Worship', ko: '주일 오전 예배' },
+            'sun-sub':   { en: 'Main Service', ko: '본 예배' },
+            'sun-body':  { 
+                en: '<span class="font-bold text-blue-600">11:00 AM</span> - Sunday School for all ages<br><span class="font-bold text-blue-600">11:00 AM</span> - Main/EM Worship Service<br>Separate services in Korean and English (EM) with powerful preaching and vibrant praise.',
+                ko: '<span class="font-bold text-blue-600">11:00 AM</span> - 전 연령 성경공부(Sunday School)<br><span class="font-bold text-blue-600">11:00 AM</span> - 본 예배/EM 예배(분리 진행)<br>한/영어(EM) 예배가 각각 진행됩니다.'
+            },
+            'thu-title': { en: 'Thursday Praise Night', ko: '목요 찬양' },
+            'thu-sub':   { en: 'Midweek Praise & Joy',  ko: '주중 찬양 예배' },
+            'thu-body':  { 
+                en: '<span class="font-bold text-blue-600">7:00 PM</span> - Praise Team Rehearsal<br><span class="font-bold text-blue-600">8:00 PM</span> - One Hour of Praise<br>Join us for an uplifting night of worship led by our praise team.',
+                ko: '<span class="font-bold text-blue-600">7:00 PM</span> - 찬양팀 연습<br><span class="font-bold text-blue-600">8:00 PM</span> - 1시간 찬양 집회(설교 없음)<br>한 시간 내내 하나님께 찬양으로 올려드립니다.'
+            },
+            'youth-title': { en: 'Sunday Youth Fellowship', ko: '주일 유스 모임' },
+            'youth-sub':   { en: 'Young Disciples',        ko: '청소년 제자 공동체' },
+            'youth-body':  { 
+                en: '<span class="font-bold text-blue-600">12:00 PM</span> - Lunch & Fellowship<br><span class="font-bold text-blue-600">1:00 PM</span> - Bible Study & Activities<br>A joyful time of learning, sharing, and growing in faith together.',
+                ko: '<span class="font-bold text-blue-600">12:00 PM</span> - 점심 및 교제<br><span class="font-bold text-blue-600">1:00 PM</span> - 성경공부 & 활동<br>함께 배우고 나누며 믿음으로 자라가는 시간입니다.'
+            },
+
+            'findus-title': { en: 'Find Us', ko: '찾아오시는 길' },
+            'findus-heading': { en: 'Visit DoDream Church', ko: '두드림 교회 방문' },
+            'findus-location-title': { en: 'Our Location', ko: '교회 위치' },
+            'findus-servicetimes-title': { en: 'Service Times', ko: '예배 시간' },
+            'findus-sunday': { en: 'Sunday Worship', ko: '주일 예배' },
+            'findus-youth': { en: 'Sunday Youth Meeting', ko: '주일 유스 모임' },
+            'findus-thu': { en: 'Thursday Praise', ko: '목요 찬양' },
+
+            // Ministries Section
+            'ministries-title':    { en: 'Get Involved', ko: '함께 섬겨요' },
+            'ministries-heading':  { en: 'Our Ministries', ko: '사역 소개' },
+            'ministries-subtitle': { en: "There's a place for everyone to serve", ko: '모든 분을 위한 섬김의 자리가 있습니다'},
+
+            'min-worship-title': { en: 'Worship Team', ko: '찬양팀' },
+            'min-worship-body': { 
+            en: "Our worship team leads the congregation in vibrant praise and worship each Sunday. Whether you sing or play an instrument, we'd love for you to join us in magnifying the Lord.",
+            ko: '매 주일 찬양과 예배로 회중을 인도합니다. 노래나 악기로 함께 섬기길 원하신다면, 주님을 높이는 이 사역에 함께하세요.'},
+
+            'min-youth-title': { en: 'Youth Ministry', ko: '청소년 사역' },
+            'min-youth-body': { 
+            en: 'Engaging middle school through college-age students with Bible study, fellowship, and fun activities that help them grow in their relationship with Christ.',
+            ko: '초·중·고등학생부터 대학생까지 말씀, 교제, 활동을 통해 그리스도 안에서 성장하도록 돕습니다.'},
+
+            'min-ss-title': { en: 'Discipleship Training', ko: '제자훈련' },
+            'min-ss-body': { 
+            en: "Weekly training to follow Jesus in everyday life—Scripture, prayer, and practice for real-life discipleship.",
+            ko: '말씀·기도·실천을 통해 예수님을 따르는 삶을 배우는 주간 훈련입니다. 일상에서 제자로 살아가도록 함께 훈련합니다.'},
+
+            'min-women-title': { en: "Women’s Mission Society", ko: '여선교회' },
+            'min-women-body': { 
+            en: "A community of women serving through prayer, care, and mission support—growing together in God's Word.",
+            ko: '기도와 돌봄, 선교후원을 통해 함께 성장하고 서로를 격려하는 자매들의 공동체입니다.'},
+
+            'min-men-title': { en: "Men’s Mission Society", ko: '남선교회' },
+            'min-men-body': { 
+            en: "Men united for service and mission—fellowship, ministry projects, and spiritual growth in God’s Word.",
+            ko: '섬김과 선교를 위해 하나 된 형제들의 공동체입니다. 신앙 안에서 참된 남성됨을 실천합니다.'},
+
+            'min-mission-title': { en: 'Missions', ko: '선교 사역' },
+            'min-mission-body': { 
+            en: 'Supporting missionaries locally and globally, with annual mission trips that allow our members to be the hands and feet of Jesus.',
+            ko: '국내외 선교를 지원하며, 매년 선교 여행을 통해 예수님의 손과 발이 되어 복음을 전합니다.'},
+
+            // Donation
+            'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
+            'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
         };
-
-
-
 
         let currentLanguage = 'en';
         
@@ -908,20 +787,22 @@
 
         function updateLanguage() {
             for (const [id, translations] of Object.entries(elementsToTranslate)) {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.textContent = translations[currentLanguage];
+                const el = document.getElementById(id);
+                if (el) {
+                el.innerHTML = translations[currentLanguage];
                 }
             }
-            languageToggle.textContent = currentLanguage === 'en' ? '한글' : 'ENG';
-            document.getElementById('mobile-language-toggle').textContent = currentLanguage === 'en' ? '한글' : 'ENG';
-}
+            const langBtn = document.getElementById('language-toggle');
+            const mLangBtn = document.getElementById('mobile-language-toggle');
+            if (langBtn)  langBtn.textContent  = currentLanguage === 'en' ? '한글' : 'ENG';
+            if (mLangBtn) mLangBtn.textContent = currentLanguage === 'en' ? '한글' : 'ENG';
+        }
 
         // Initialize with English
         updateLanguage();
 
         // Mobile menu toggle
-document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click', function() {
+        document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -956,13 +837,62 @@ document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click'
             currentLanguage = currentLanguage === 'en' ? 'ko' : 'en';
             updateLanguage();
         });
-// Close mobile menu when clicking outside
+        // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
             const menu = document.getElementById('mobile-menu');
             if (!menu.contains(e.target) && !document.getElementById('mobile-menu-toggle').contains(e.target)) {
                 menu.classList.add('hidden');
             }
         });
-</script>
+        // Submenu toggles for mobile
+        const mobileAccordions = [
+            { btn: 'm-about-toggle',    panel: 'm-about-sub' },
+            { btn: 'm-community-toggle',panel: 'm-community-sub' },
+            { btn: 'm-events-toggle',   panel: 'm-events-sub' },
+            { btn: 'm-nextgen-toggle',  panel: 'm-nextgen-sub' },
+            { btn: 'm-smd-toggle',      panel: 'm-smd-sub' }
+        ];
+
+         const closeOthers = (exceptPanelId) => {
+            mobileAccordions.forEach(({ btn, panel }) => {
+            if (panel !== exceptPanelId) {
+                const b = document.getElementById(btn);
+                const p = document.getElementById(panel);
+                if (!b || !p) return;
+                p.classList.add('hidden');
+                b.setAttribute('aria-expanded', 'false');
+                const chevWrap = b.querySelector('i[data-feather="chevron-down"]')?.parentElement;
+                if (chevWrap) chevWrap.classList.remove('rotate-180');
+            }
+            });
+        };
+
+        mobileAccordions.forEach(({ btn, panel }) => {
+            const b = document.getElementById(btn);
+            const p = document.getElementById(panel);
+            if (!b || !p) return;
+
+            b.setAttribute('aria-controls', panel);
+            b.setAttribute('aria-expanded', 'false');
+
+            b.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = !p.classList.contains('hidden');
+
+            if (isOpen) {
+                p.classList.add('hidden');
+                b.setAttribute('aria-expanded', 'false');
+                const chevWrap = b.querySelector('i[data-feather="chevron-down"]')?.parentElement;
+                if (chevWrap) chevWrap.classList.remove('rotate-180');
+            } else {
+                closeOthers(panel);
+                p.classList.remove('hidden');
+                b.setAttribute('aria-expanded', 'true');
+                const chevWrap = b.querySelector('i[data-feather="chevron-down"]')?.parentElement;
+                if (chevWrap) chevWrap.classList.add('rotate-180');
+            }
+            });
+        });
+    </script>
 </body>
 </html>
