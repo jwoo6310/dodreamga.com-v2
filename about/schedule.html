@@ -397,8 +397,6 @@
         </div>
     </footer>
     <script>
-        // Language toggle
-        const languageToggle = document.getElementById('language-toggle');
         const elementsToTranslate = {
             // PC Nav
             'nav-home':     { en: 'Home',         ko: '홈' },
@@ -475,116 +473,7 @@
             'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
             'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
         };
-        // Language Toggle EN/KR
-        let currentLanguage = 'en';       
-        languageToggle.addEventListener('click', () => {
-            currentLanguage = currentLanguage === 'en' ? 'ko' : 'en';
-            updateLanguage();
-        });
-        function updateLanguage() {
-            for (const [id, translations] of Object.entries(elementsToTranslate)) {
-                const el = document.getElementById(id);
-                if (el) {
-                el.innerHTML = translations[currentLanguage];
-                }
-            }
-            const langBtn = document.getElementById('language-toggle');
-            const mLangBtn = document.getElementById('mobile-language-toggle');
-            if (langBtn)  langBtn.textContent  = currentLanguage === 'en' ? '한글' : 'ENG';
-            if (mLangBtn) mLangBtn.textContent = currentLanguage === 'en' ? '한글' : 'ENG';
-        }
-        // Initialize with English
-        updateLanguage();
-        // Mobile menu toggle
-        document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-        // Vanta.js background
-        VANTA.WAVES({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x4b7bec,
-            shininess: 50.00,
-            waveHeight: 15.00,
-            waveSpeed: 0.50,
-            zoom: 0.80
-        });
-        // Initialize feather icons
-        feather.replace();
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-        // Mobile language toggle
-        document.getElementById('mobile-language-toggle').addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent menu toggle when clicking language button
-            currentLanguage = currentLanguage === 'en' ? 'ko' : 'en';
-            updateLanguage();
-        });
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            const menu = document.getElementById('mobile-menu');
-            if (!menu.contains(e.target) && !document.getElementById('mobile-menu-toggle').contains(e.target)) {
-                menu.classList.add('hidden');
-            }
-        });
-        // Submenu toggles for mobile
-        const mobileAccordions = [
-            { btn: 'm-about-toggle',    panel: 'm-about-sub' },
-            { btn: 'm-community-toggle',panel: 'm-community-sub' },
-            { btn: 'm-events-toggle',   panel: 'm-events-sub' },
-            { btn: 'm-nextgen-toggle',  panel: 'm-nextgen-sub' },
-            { btn: 'm-smd-toggle',      panel: 'm-smd-sub' }
-        ];
-        // Mobile Menu Close Other When New Opened
-        const closeOthers = (exceptPanelId) => {
-            mobileAccordions.forEach(({ btn, panel }) => {
-            if (panel !== exceptPanelId) {
-                const b = document.getElementById(btn);
-                const p = document.getElementById(panel);
-                if (!b || !p) return;
-                p.classList.add('hidden');
-                b.setAttribute('aria-expanded', 'false');
-                const chevWrap = b.querySelector('i[data-feather="chevron-down"]')?.parentElement;
-                if (chevWrap) chevWrap.classList.remove('rotate-180');
-            }
-            });
-        };
-        // Mobile Menu Dropdown
-        mobileAccordions.forEach(({ btn, panel }) => {
-            const b = document.getElementById(btn);
-            const p = document.getElementById(panel);
-            if (!b || !p) return;
-
-            b.setAttribute('aria-controls', panel);
-            b.setAttribute('aria-expanded', 'false');
-
-            b.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isOpen = !p.classList.contains('hidden');
-
-            if (isOpen) {
-                p.classList.add('hidden');
-                b.setAttribute('aria-expanded', 'false');
-                const chevWrap = b.querySelector('i[data-feather="chevron-down"]')?.parentElement;
-                if (chevWrap) chevWrap.classList.remove('rotate-180');
-            } else {
-                closeOthers(panel);
-                p.classList.remove('hidden');
-                b.setAttribute('aria-expanded', 'true');
-                const chevWrap = b.querySelector('i[data-feather="chevron-down"]')?.parentElement;
-                if (chevWrap) chevWrap.classList.add('rotate-180');
-            }
-            });
-        });
     </script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
