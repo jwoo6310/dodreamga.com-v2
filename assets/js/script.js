@@ -1,3 +1,24 @@
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+            50:  '#f6f8f3',
+            100: '#eaefe1',
+            200: '#dee5cf',
+            300: '#d1dbbd',
+            400: '#c1cfa5',
+            500: '#adbf88',  
+            600: '#93a273',
+            700: '#79855f',
+            800: '#5f694a',
+            900: '#454c36'
+        }
+      }
+    }
+  }
+}
+
 function getQueryLang() {
   const m = location.search.match(/[?&]lang=(ko|en)\b/i);
   return m ? m[1].toLowerCase() : null;
