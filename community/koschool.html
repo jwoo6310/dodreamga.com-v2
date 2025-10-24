@@ -243,7 +243,7 @@
             </div>
         </div>
     </nav>
-    <!-- New Page -->
+    <!-- Korean School -->
     <div class="bg-gray-100">
         <main class="pt-24 pb-0 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
             <div class="text-center mb-12 pt-12">
@@ -273,17 +273,17 @@
                 <h2 id="ko-2-title" class="text-3xl font-bold mb-8 text-center">Our Mission</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white text-black p-6 rounded-lg shadow-md text-center">
-                        <i data-feather="book" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+                        <i data-feather="book" class="w-12 h-12 mx-auto mb-4 text-brand-700 "></i>
                         <h3 id="ko-2-sub-1" class="text-xl font-semibold mb-2">Language Education</h3>
                         <p id="ko-2-sub-2">Comprehensive Korean language instruction tailored for bilingual children</p>
                     </div>
                     <div class="bg-white text-black p-6 rounded-lg shadow-md text-center">
-                        <i data-feather="globe" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+                        <i data-feather="globe" class="w-12 h-12 mx-auto mb-4 text-brand-700 "></i>
                         <h3 id="ko-2-sub-3" class="text-xl font-semibold mb-2">Cultural Immersion</h3>
                         <p id="ko-2-sub-4">Authentic Korean cultural experiences and traditions</p>
                     </div>
                     <div class="bg-white text-black p-6 rounded-lg shadow-md text-center">
-                        <i data-feather="heart" class="w-12 h-12 mx-auto mb-4 text-primary"></i>
+                        <i data-feather="heart" class="w-12 h-12 mx-auto mb-4 text-brand-700 "></i>
                         <h3 id="ko-2-sub-5" class="text-xl font-semibold mb-2">Community Building</h3>
                         <p id="ko-2-sub-6">Fostering connections between students, families, and educators</p>
                     </div>
@@ -406,22 +406,29 @@
             // Korean School
             'ko-title': { en: "Korean School", ko: '한국 학교' },
             'ko-1-title': { en: "About Our School", ko: '학교 소개' },
-            'ko-1-sub-1': { en: "POS Groups — Overview", ko: 'POS 모임 소개' },
-            'ko-1-sub-2': { en: "POS Groups — Overview", ko: 'POS 모임 소개' },
-            'ko-1-sub-3': { en: "POS Groups — Overview", ko: 'POS 모임 소개' },
-            'ko-1-sub-4': { en: "POS Groups — Overview", ko: 'POS 모임 소개' },
-            'ko-2-title': { en: "Our Mission", ko: 'POS 모임 소개' },
-            'ko-2-sub-1': { en: "Language Education", ko: 'POS 모임 소개' },
-            'ko-2-sub-2': { en: "Comprehensive Korean language instruction tailored for bilingual children", ko: 'POS 모임 소개' },
-            'ko-2-sub-3': { en: "Cultural Immersion", ko: 'POS 모임 소개' },
-            'ko-2-sub-4': { en: "Authentic Korean cultural experiences and traditions", ko: 'POS 모임 소개' },
-            'ko-2-sub-5': { en: "Community Building", ko: 'POS 모임 소개' },
-            'ko-2-sub-6': { en: "Community Building", ko: 'POS 모임 소개' },
+            'ko-1-sub-1': { en: '<strong>Established:</strong> September 2009', ko:'<strong>설립:</strong> 2009년 9월'},
+            'ko-1-sub-2': { en: '<strong>Affiliation:</strong> National Association of Korean Schools (NAKS) and Southeast Korean School Association', ko: '<strong>소속:</strong> 재미한국학교협의회(NAKS), 남동부한국학교협의회' },
+            'ko-1-sub-3': { en: 'We provide Korean language and cultural arts education for children in bilingual living environments, helping them develop creative and flexible thinking through collaboration between teachers, students, parents, and associations.', 
+                            ko: '우리 학교는 이중언어 환경의 아이들을 위해 한국어와 문화·예술 교육을 제공하며, 교사·학생·학부모·협회의 협력을 통해 창의적이고 유연한 사고를 기르도록 돕습니다.' },
+            'ko-1-sub-4': { en: 'We offer various Korean cultural experiences and events such as traditional market days to introduce Korea to our students.', ko: '또한 전통 장터 체험날 등 다양한 한국 문화 활동과 행사를 통해 학생들에게 한국을 소개합니다.' },
+            'ko-2-title': { en: "Our Mission", ko: '우리의 사명' },
+            'ko-2-sub-1': { en: "Language Education", ko: '언어 교육' },
+            'ko-2-sub-2': { en: "Comprehensive Korean language instruction tailored for bilingual children", ko: '이중언어 아동을 위한 체계적이고 종합적인 한국어 교육을 제공합니다.' },
+            'ko-2-sub-3': { en: "Cultural Immersion", ko: '문화 체험' },
+            'ko-2-sub-4': { en: "Authentic Korean cultural experiences and traditions", ko: '진정성 있는 한국 문화 경험과 전통을 배우고 체득합니다.' },
+            'ko-2-sub-5': { en: "Community Building", ko: '공동체 형성' },
+            'ko-2-sub-6': { en: "Fostering connections between students, families, and educators", ko: '학생·가정·교사 간의 연결과 협력을 촉진하여 건강한 배움의 공동체를 만들어 갑니다.' },
 
             // Donation
             'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
             'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
         };
+        function updateLang(lang='en') {
+        Object.entries(i18n).forEach(([id, t]) => {
+            const el = document.getElementById(id);
+            if (el) el.innerHTML = t[lang];
+        });
+        }
     </script>
     <script src="../assets/js/script.js"></script>
 </body>
