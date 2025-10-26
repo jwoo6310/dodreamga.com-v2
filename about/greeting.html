@@ -1,449 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoDream Baptist Church</title>
-    <link rel="icon" href="../favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-        
-        .font-korean {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DoDream Baptist Church</title>
+        <link rel="icon" href="../favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+            .font-korean {
             font-family: 'Noto Sans KR', sans-serif;
-        }
-        .font-serif-korean {
+            }
+            .font-serif-korean {
             font-family: 'Nanum Myeongjo', serif;
-        }
-        .hero-gradient {
+            }
+            .hero-gradient {
             background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
-        }
-        .sermon-card:hover {
+            }
+            .sermon-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-    </style>
-</head>
-<body class="font-korean bg-gray-50 -mt-14 sm:mt-0">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="hidden md:flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <a href="../index.html" id="logo-link" class="inline-flex items-center" aria-label="Home">
+            }
+        </style>
+    </head>
+    <body class="font-korean bg-gray-50 -mt-14 sm:mt-0">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-sm fixed w-full z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="hidden md:flex items-center">
+                        <div class="flex-shrink-0 flex items-center">
+                            <a href="../index.html" id="logo-link" class="inline-flex items-center" aria-label="Home">
                             <img src="../assets/img/logo.png" alt="DoDream Church Logo" class="h-12 w-auto">
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-                    <div class="hidden md:ml-6 md:flex md:items-center">
-                        <ul class="flex space-x-6">
-                        <!-- Home  -->
-                        <li class="relative group">
-                            <a href="../index.html" id="nav-home" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
+                    <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                        <div class="hidden md:ml-6 md:flex md:items-center">
+                            <ul class="flex space-x-6">
+                            <!-- Home  -->
+                            <li class="relative group">
+                                <a href="../index.html" id="nav-home" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
                                 Home
-                            </a>
-                        </li>
-                        <!-- About -->
-                        <li class="relative group">
-                            <a href="greeting.html" id="nav-about" class="inline-block align-middle px-3 py-2 font-medium text-gray-900 border-b-2 border-brand-500 hover:text-brand-600 focus:outline-none">
+                                </a>
+                            </li>
+                            <!-- About -->
+                            <li class="relative group">
+                                <a href="greeting.html" id="nav-about" class="inline-block align-middle px-3 py-2 font-medium text-gray-900 border-b-2 border-brand-500 hover:text-brand-600 focus:outline-none">
                                 About
-                            </a>
-                            <div class="absolute top-full left-0 pt-2
-                                pointer-events-none opacity-0 translate-y-1
-                                transition ease-out duration-150
-                                group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
-                                group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                                <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
-                                    <a id="about-greeting" href="greeting.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Greeting</a>
-                                    <a id="about-vision" href="vision.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Vision</a>
-                                    <a id="about-worship" href="schedule.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Worship Schedule</a>
-                                    <a id="about-location" href="directions.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Directions</a>
+                                </a>
+                                <div class="absolute top-full left-0 pt-2
+                                    pointer-events-none opacity-0 translate-y-1
+                                    transition ease-out duration-150
+                                    group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
+                                    group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                    <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
+                                        <a id="about-greeting" href="greeting.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Greeting</a>
+                                        <a id="about-vision" href="vision.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Vision</a>
+                                        <a id="about-worship" href="schedule.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Worship Schedule</a>
+                                        <a id="about-location" href="directions.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Directions</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <!-- Our Community -->
-                        <li class="relative group">
-                            <a href="../community/pos.html" id="nav-community" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
+                            </li>
+                            <!-- Our Community -->
+                            <li class="relative group">
+                                <a href="../community/pos.html" id="nav-community" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
                                 Community
-                            </a>
-                            <div class="absolute top-full left-0 pt-2
-                                pointer-events-none opacity-0 translate-y-1
-                                transition ease-out duration-150
-                                group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
-                                group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                                <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
-                                    <a id="community-pos" href="../community/pos.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">POS Groups</a>
-                                    <a id="community-school" href="../community/koschool.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Korean School</a>
-                                    <a id="community-dept" href="../community/departments.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Departments</a>
+                                </a>
+                                <div class="absolute top-full left-0 pt-2
+                                    pointer-events-none opacity-0 translate-y-1
+                                    transition ease-out duration-150
+                                    group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
+                                    group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                    <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
+                                        <a id="community-pos" href="../community/pos.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">POS Groups</a>
+                                        <a id="community-school" href="../community/koschool.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Korean School</a>
+                                        <a id="community-dept" href="../community/departments.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Departments</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <!-- Events -->
-                        <li class="relative group">
-                            <a href="../event/regular.html" id="nav-events" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
+                            </li>
+                            <!-- Events -->
+                            <li class="relative group">
+                                <a href="../event/regular.html" id="nav-events" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
                                 Events
-                            </a>
-                            <div class="absolute top-full left-0 pt-2
-                                pointer-events-none opacity-0 translate-y-1
-                                transition ease-out duration-150
-                                group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
-                                group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                                <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
-                                    <a id="events-regular" href="../event/regular.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Regular Meetings</a>
-                                    <a id="events-academy" href="../event/academy.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Academy</a>
-                                    <a id="events-special" href="../event/special.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Special Events</a>
+                                </a>
+                                <div class="absolute top-full left-0 pt-2
+                                    pointer-events-none opacity-0 translate-y-1
+                                    transition ease-out duration-150
+                                    group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
+                                    group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                    <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
+                                        <a id="events-regular" href="../event/regular.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Regular Meetings</a>
+                                        <a id="events-academy" href="../event/academy.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Academy</a>
+                                        <a id="events-special" href="../event/special.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Special Events</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <!-- Next Gen -->
-                        <li class="relative group">
-                            <a href="../nextgen/ministries.html" id="nav-nextgen" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
+                            </li>
+                            <!-- Next Gen -->
+                            <li class="relative group">
+                                <a href="../nextgen/ministries.html" id="nav-nextgen" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
                                 Next Gen
-                            </a>
-                            <div class="absolute top-full left-0 pt-2
-                                pointer-events-none opacity-0 translate-y-1
-                                transition ease-out duration-150
-                                group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
-                                group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                                <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
-                                    <a id="nextgen-ministries" href="../nextgen/ministries.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Ministries</a>
-                                    <a id="nextgen-gallery" href="../nextgen/gallery.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Gallery</a>
+                                </a>
+                                <div class="absolute top-full left-0 pt-2
+                                    pointer-events-none opacity-0 translate-y-1
+                                    transition ease-out duration-150
+                                    group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
+                                    group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                    <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
+                                        <a id="nextgen-ministries" href="../nextgen/ministries.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Ministries</a>
+                                        <a id="nextgen-gallery" href="../nextgen/gallery.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Gallery</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <!-- SMD344 -->
-                        <li class="relative group">
-                            <a href="../smd344/missionaries.html" id="nav-smd" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
+                            </li>
+                            <!-- SMD344 -->
+                            <li class="relative group">
+                                <a href="../smd344/missionaries.html" id="nav-smd" class="inline-block align-middle px-3 py-2 font-medium hover:text-brand-600 focus:outline-none">
                                 smd344
-                            </a>
-                            <div class="absolute top-full left-0 pt-2
-                                pointer-events-none opacity-0 translate-y-1
-                                transition ease-out duration-150
-                                group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
-                                group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                                <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
-                                    <a id="smd-missionary" href="../smd344/missionaries.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Missionaries</a>
-                                    <a id="smd-discipleship" href="../smd344/discipleship.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Discipleship</a>
+                                </a>
+                                <div class="absolute top-full left-0 pt-2
+                                    pointer-events-none opacity-0 translate-y-1
+                                    transition ease-out duration-150
+                                    group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
+                                    group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                    <div class="w-56 bg-white rounded-md py-2 shadow-lg ring-1 ring-black/5">
+                                        <a id="smd-missionary" href="../smd344/missionaries.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Missionaries</a>
+                                        <a id="smd-discipleship" href="../smd344/discipleship.html" class="block px-4 py-2 hover:bg-brand-50 hover:text-brand-600">Discipleship</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <!-- Language Toggle -->
-                        <li class="flex items-center">
-                            <button id="language-toggle" class="ml-2 px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">
-                            한글/ENG
-                            </button>
-                        </li>
-                    </div>
-                    <!-- Hidden Mobile Menu -->
-                    <div class="-mr-2 flex items-center md:hidden">
-                        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-500" aria-controls="mobile-menu" aria-expanded="false">
+                            </li>
+                            <!-- Language Toggle -->
+                            <li class="flex items-center">
+                                <button id="language-toggle" class="ml-2 px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">
+                                한글/ENG
+                                </button>
+                            </li>
+                        </div>
+                        <!-- Hidden Mobile Menu -->
+                        <div class="-mr-2 flex items-center md:hidden">
+                            <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-500" aria-controls="mobile-menu" aria-expanded="false">
                             <i data-feather="menu"></i>
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Mobile Menu Top Bar -->
-        <div class="md:hidden flex items-center justify-between px-4 py-2 bg-white">
-            <a href="../index.html" id="logo-link" class="inline-flex items-center" aria-label="Home">
+            <!-- Mobile Menu Top Bar -->
+            <div class="md:hidden flex items-center justify-between px-4 py-2 bg-white">
+                <a href="../index.html" id="logo-link" class="inline-flex items-center" aria-label="Home">
                 <img src="../assets/img/logo.png" alt="DoDream Church Logo" class="h-10 w-auto">
-            </a>
-            <div class="flex items-center space-x-2">
-                <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">한글/ENG</button>
-                <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
-                    <i data-feather="menu"></i>
-                </button>        
-            </div>
-        </div>
-        <!-- Mobile menu with submenus -->
-        <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
-            <div class="pt-2 pb-3 space-y-1">
-                <!-- Home -->
-                <a id="m-home" href="../index.html" class="bg-brand-50 border-brand-500 text-brand-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
-                Home
                 </a>
-                <!-- About -->
-                <button id="m-about-toggle"
-                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                <div class="flex items-center space-x-2">
+                    <button id="mobile-language-toggle" class="px-2 py-1 text-sm rounded border border-brand-500 text-brand-600 hover:bg-brand-50 transition-colors">한글/ENG</button>
+                    <button id="mobile-menu-toggle" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
+                    <i data-feather="menu"></i>
+                    </button>        
+                </div>
+            </div>
+            <!-- Mobile menu with submenus -->
+            <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+                <div class="pt-2 pb-3 space-y-1">
+                    <!-- Home -->
+                    <a id="m-home" href="../index.html" class="bg-brand-50 border-brand-500 text-brand-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                    Home
+                    </a>
+                    <!-- About -->
+                    <button id="m-about-toggle"
+                        class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
                     <span id="m-about">About</span>
                     <span class="ml-2 inline-flex items-center">
-                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
                     </span>
-                </button>
-                <div id="m-about-sub" class="hidden pl-8 space-y-1">
-                    <a id="m-about-greeting"  href="greeting.html" class="block py-2 text-gray-600 hover:text-brand-600">Greeting</a>
-                    <a id="m-about-vision"    href="vision.html" class="block py-2 text-gray-600 hover:text-brand-600">Vision</a>
-                    <a id="m-about-worship"   href="schedule.html" class="block py-2 text-gray-600 hover:text-brand-600">Worship Schedule</a>
-                    <a id="m-about-location"  href="directions.html" class="block py-2 text-gray-600 hover:text-brand-600">Directions</a>
-                </div>
-                <!-- Our Community -->
-                <button id="m-community-toggle"
-                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                    </button>
+                    <div id="m-about-sub" class="hidden pl-8 space-y-1">
+                        <a id="m-about-greeting"  href="greeting.html" class="block py-2 text-gray-600 hover:text-brand-600">Greeting</a>
+                        <a id="m-about-vision"    href="vision.html" class="block py-2 text-gray-600 hover:text-brand-600">Vision</a>
+                        <a id="m-about-worship"   href="schedule.html" class="block py-2 text-gray-600 hover:text-brand-600">Worship Schedule</a>
+                        <a id="m-about-location"  href="directions.html" class="block py-2 text-gray-600 hover:text-brand-600">Directions</a>
+                    </div>
+                    <!-- Our Community -->
+                    <button id="m-community-toggle"
+                        class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
                     <span id="m-community">Our Community</span>
                     <span class="ml-2 inline-flex items-center">
-                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
                     </span>
-                </button>
-                <div id="m-community-sub" class="hidden pl-8 space-y-1">
-                    <a id="m-community-pos"     href="../community/pos.html" class="block py-2 text-gray-600 hover:text-brand-600">POS Groups</a>
-                    <a id="m-community-school"  href="../community/koschool.html" class="block py-2 text-gray-600 hover:text-brand-600">Korean School</a>
-                    <a id="m-community-dept"    href="../community/departments.html" class="block py-2 text-gray-600 hover:text-brand-600">Departments</a>
-                </div>
-                <!-- Events -->
-                <button id="m-events-toggle"
-                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                    </button>
+                    <div id="m-community-sub" class="hidden pl-8 space-y-1">
+                        <a id="m-community-pos"     href="../community/pos.html" class="block py-2 text-gray-600 hover:text-brand-600">POS Groups</a>
+                        <a id="m-community-school"  href="../community/koschool.html" class="block py-2 text-gray-600 hover:text-brand-600">Korean School</a>
+                        <a id="m-community-dept"    href="../community/departments.html" class="block py-2 text-gray-600 hover:text-brand-600">Departments</a>
+                    </div>
+                    <!-- Events -->
+                    <button id="m-events-toggle"
+                        class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
                     <span id="m-events">Events</span>
                     <span class="ml-2 inline-flex items-center">
-                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
                     </span>
-                </button>
-                <div id="m-events-sub" class="hidden pl-8 space-y-1">
-                    <a id="m-events-regular" href="../event/regular.html" class="block py-2 text-gray-600 hover:text-brand-600">Regular Meetings</a>
-                    <a id="m-events-academy" href="../event/academy.html" class="block py-2 text-gray-600 hover:text-brand-600">Academy</a>
-                    <a id="m-events-special" href="../event/special.html" class="block py-2 text-gray-600 hover:text-brand-600">Special Events</a>
-                </div>
-                <!-- Next Gen -->
-                <button id="m-nextgen-toggle"
-                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                    </button>
+                    <div id="m-events-sub" class="hidden pl-8 space-y-1">
+                        <a id="m-events-regular" href="../event/regular.html" class="block py-2 text-gray-600 hover:text-brand-600">Regular Meetings</a>
+                        <a id="m-events-academy" href="../event/academy.html" class="block py-2 text-gray-600 hover:text-brand-600">Academy</a>
+                        <a id="m-events-special" href="../event/special.html" class="block py-2 text-gray-600 hover:text-brand-600">Special Events</a>
+                    </div>
+                    <!-- Next Gen -->
+                    <button id="m-nextgen-toggle"
+                        class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
                     <span id="m-nextgen">Next Gen</span>
                     <span class="ml-2 inline-flex items-center">
-                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
                     </span>
-                </button>
-                <div id="m-nextgen-sub" class="hidden pl-8 space-y-1">
-                    <a id="m-nextgen-ministries"       href="../nextgen/ministries.html" class="block py-2 text-gray-600 hover:text-brand-600">Ministries</a>
-                    <a id="m-nextgen-gallery"  href="../nextgen/gallery.html" class="block py-2 text-gray-600 hover:text-brand-600">Gallery</a>
-                </div>
-                <!-- SMD344 -->
-                <button id="m-smd-toggle"
-                class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
+                    </button>
+                    <div id="m-nextgen-sub" class="hidden pl-8 space-y-1">
+                        <a id="m-nextgen-ministries"       href="../nextgen/ministries.html" class="block py-2 text-gray-600 hover:text-brand-600">Ministries</a>
+                        <a id="m-nextgen-gallery"  href="../nextgen/gallery.html" class="block py-2 text-gray-600 hover:text-brand-600">Gallery</a>
+                    </div>
+                    <!-- SMD344 -->
+                    <button id="m-smd-toggle"
+                        class="w-full flex items-center justify-between pl-3 pr-4 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50">
                     <span id="m-smd">SMD344</span>
                     <span class="ml-2 inline-flex items-center">
-                        <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    <i data-feather="chevron-down" class="h-4 w-4 transition-transform"></i>
                     </span>
-                </button>
-                <div id="m-smd-sub" class="hidden pl-8 space-y-1">
-                    <a id="m-smd-missionary"   href="../smd344/missionaries.html" class="block py-2 text-gray-600 hover:text-brand-600">Missionaries</a>
-                    <a id="m-smd-discipleship" href="../smd344/discipleship.html" class="block py-2 text-gray-600 hover:text-brand-600">Discipleship</a>
+                    </button>
+                    <div id="m-smd-sub" class="hidden pl-8 space-y-1">
+                        <a id="m-smd-missionary"   href="../smd344/missionaries.html" class="block py-2 text-gray-600 hover:text-brand-600">Missionaries</a>
+                        <a id="m-smd-discipleship" href="../smd344/discipleship.html" class="block py-2 text-gray-600 hover:text-brand-600">Discipleship</a>
+                    </div>
                 </div>
             </div>
+        </nav>
+        <!-- Greeting -->
+        <div class="bg-gray-100">
+            <main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+                <section class="">
+                    <div class="text-center mb-12 pt-12">
+                        <h2 id="welcome-title" class="text-3xl font-bold text-primary mb-4">인사말</h2>
+                        <div class="w-24 h-1 bg-brand-700 mx-auto"></div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-12">
+                        <div class="flex flex-col md:flex-row items-center mb-8">
+                            <div class="md:w-1/3 mb-6 md:mb-0">
+                                <img src="../assets/img/greeting-pastor.jpg" alt="Pastor David Kim" class="rounded-lg shadow-md w-full">
+                            </div>
+                            <div class="md:w-2/3 md:pl-8">
+                                <h2 id="greeting-title" class="text-2xl font-bold mb-4">김인승 목사님</h2>
+                                <p id="greeting-sub" class="text-gray-600 mb-2">담임 목사</p>
+                                <div class="border-t border-gray-200 pt-4">
+                                    <p id="welcome-text" class="text-gray-700 mb-4">기도와 말씀으로 무장한 믿음의 공동체를 세우기 위해 부름 받았습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prose max-w-none">
+                            <h3 id="info-title" class="text-xl font-semibold mb-4">담임목사 소개</h3>
+                            <p id="info-sub-1" class="mb-4">김태범 목사의 아들로 2대째 목사로 3자녀를 둔 김인승 목사는 두드림 교회 담임 목사이며 smd344 선교단 Founder로 현 미주 smd344 선교단 대표입니다.</p>
+                            <p id="info-sub-2" class="mb-4">성결대와 서울신대(M-div), 한양대 교육 대학원(MED)에서 석사를 취득했고 Gordon-Conwell Theological Seminary 목회학 박사(D-Min)를 취득하였습니다.</p>
+                            <p id="info-sub-3" class="mb-4">김인승 목사는, 지난 30년 간 제자 훈련을 통해 사람을 세워 세상에 그리스도의 문화를 세우고, 선교에 동참하고 있습니다. 단기 선교 11기, 중장기 3기 그리고 장기 1기를 파송했습니다.</p>
+                            <p id="info-sub-4" class="mb-4">저서로는 ‘성막 공과 시리즈’와 리더 공과 ‘삶과 사역’이 있습니다. 성막 공과 시리즈는 현재 5개국 이상 언어로 번역되어 선교지에 사용하고 있습니다.</p>
+                            <p id="info-sub-5" class="mb-4">김인승 목사는 지난 10년 간 애틀랜타 청소년 Center에 속한 Help Line을 섬겼으며 5년 간, 크리스챤 타임즈에 ‘시력교정’이란 글을 기고했고 2년 간 인터넷 방송 진행했으며 10년 간, 애틀랜타 라디오 ‘김인승의 맘 상한 청소년을 위하여’라는 제목으로 방송하였습니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                        <h2 id="history-title" class="text-2xl font-bold mb-6">교회 약력</h2>
+                        <p id="history-sub" class="font-semibold pb-8">두드림 교회는 남침례 교회 소속입니다.</p>
+                        <div class="space-y-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-100 text-brand-600 font-bold">2015</div>
+                                </div>
+                                <div>
+                                    <h3 id="history-title-1" class="text-lg font-semibold">한국 학교 설립</h3>
+                                    <p id="history-sub-1" class="text-gray-600">차세대를 위한 한국학교 개교</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-100 text-brand-600 font-bold">2019</div>
+                                </div>
+                                <div>
+                                    <h3 id="history-title-2" class="text-lg font-semibold">남침례 교회 등록</h3>
+                                    <p id="history-sub-2" class="text-gray-600">남침례교(SBC) 소속 교회로 공식 등록</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-100 text-brand-600 font-bold">2025</div>
+                                </div>
+                                <div>
+                                    <h3 id="history-title-3" class="text-lg font-semibold">현 위치에 교회 이전 건축</h3>
+                                    <p id="history-sub-3" class="text-gray-600">새 성전 건축 완료 및 현 위치로 이전</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
-    </nav>
-    <!-- New Page -->
-    <div class="bg-gray-100">
-        <main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-            <section class="">
-                <div class="text-center mb-12 pt-12">
-                    <h2 id="welcome-title" class="text-3xl font-bold text-primary mb-4">인사말</h2>
-                    <div class="w-24 h-1 bg-brand-700 mx-auto"></div>
+        <!-- Donation Information -->
+        <div class="bg-brand-700">
+            <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 sm:py-12 lg:py-16 lg:px-8 lg:flex lg:items-center">
+                <div class="lg:w-0 lg:flex-1">
+                    <h2 id="donation-title" class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                        Giving & Support
+                    </h2>
+                    <p id="donation-subtitle" class="mt-3 max-w-3xl text-lg leading-6 text-brand-200">
+                        Support our ministry through your generous donations
+                    </p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-12">
-                    <div class="flex flex-col md:flex-row items-center mb-8">
-                        <div class="md:w-1/3 mb-6 md:mb-0">
-                            <img src="../assets/img/greeting-pastor.jpg" alt="Pastor David Kim" class="rounded-lg shadow-md w-full">
+                <div class="mt-8 lg:mt-0 lg:ml-8">
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <h3 class="text-lg font-medium text-white">Venmo</h3>
+                            <p class="mt-2 text-brand-200">@Dodream344</p>
+                            <p class="mt-1 text-brand-200">Phone: 678-343-5799</p>
                         </div>
-                        <div class="md:w-2/3 md:pl-8">
-                            <h2 id="greeting-title" class="text-2xl font-bold mb-4">김인승 목사님</h2>
-                            <p id="greeting-sub" class="text-gray-600 mb-2">담임 목사</p>
-                            <div class="border-t border-gray-200 pt-4">
-                                <p id="welcome-text" class="text-gray-700 mb-4">기도와 말씀으로 무장한 믿음의 공동체를 세우기 위해 부름 받았습니다.</p>
-                            </div>
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <h3 class="text-lg font-medium text-white">Zelle</h3>
+                            <p class="mt-2 text-brand-200">NCC</p>
+                            <p class="mt-1 text-brand-200">Phone: 404-944-9821</p>
                         </div>
-                    </div>
-
-                    <div class="prose max-w-none">
-                        <h3 id="info-title" class="text-xl font-semibold mb-4">담임목사 소개</h3>
-                        <p id="info-sub-1" class="mb-4">김태범 목사의 아들로 2대째 목사로 3자녀를 둔 김인승 목사는 두드림 교회 담임 목사이며 smd344 선교단 Founder로 현 미주 smd344 선교단 대표입니다.</p>
-                        <p id="info-sub-2" class="mb-4">성결대와 서울신대(M-div), 한양대 교육 대학원(MED)에서 석사를 취득했고 Gordon-Conwell Theological Seminary 목회학 박사(D-Min)를 취득하였습니다.</p>
-                        <p id="info-sub-3" class="mb-4">김인승 목사는, 지난 30년 간 제자 훈련을 통해 사람을 세워 세상에 그리스도의 문화를 세우고, 선교에 동참하고 있습니다. 단기 선교 11기, 중장기 3기 그리고 장기 1기를 파송했습니다.</p>
-                        <p id="info-sub-4" class="mb-4">저서로는 ‘성막 공과 시리즈’와 리더 공과 ‘삶과 사역’이 있습니다. 성막 공과 시리즈는 현재 5개국 이상 언어로 번역되어 선교지에 사용하고 있습니다.</p>
-                        <p id="info-sub-5" class="mb-4">김인승 목사는 지난 10년 간 애틀랜타 청소년 Center에 속한 Help Line을 섬겼으며 5년 간, 크리스챤 타임즈에 ‘시력교정’이란 글을 기고했고 2년 간 인터넷 방송 진행했으며 10년 간, 애틀랜타 라디오 ‘김인승의 맘 상한 청소년을 위하여’라는 제목으로 방송하였습니다.</p>
-                        
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
-                    <h2 id="history-title" class="text-2xl font-bold mb-6">교회 약력</h2>
-                    <p id="history-sub" class="font-semibold pb-8">두드림 교회는 남침례 교회 소속입니다.</p>
-                    <div class="space-y-8">
-                        <div class="flex">
-                            <div class="flex-shrink-0 mr-4">
-                                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-100 text-brand-600 font-bold">2015</div>
-                            </div>
-                            <div>
-                                <h3 id="history-title-1" class="text-lg font-semibold">한국 학교 설립</h3>
-                                <p id="history-sub-1" class="text-gray-600">차세대를 위한 한국학교 개교</p>
-                            </div>
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg sm:col-span-2">
+                            <h3 class="text-lg font-medium text-white">Mailing Address</h3>
+                            <p class="mt-2 text-brand-200">3415 Smithtown Road</p>
+                            <p class="text-brand-200">Suwanee, Georgia 30024</p>
+                            <p class="text-brand-200">U.S.A</p>
                         </div>
-                        <div class="flex">
-                            <div class="flex-shrink-0 mr-4">
-                                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-100 text-brand-600 font-bold">2019</div>
-                            </div>
-                            <div>
-                                <h3 id="history-title-2" class="text-lg font-semibold">남침례 교회 등록</h3>
-                                <p id="history-sub-2" class="text-gray-600">남침례교(SBC) 소속 교회로 공식 등록</p>
-                            </div>
-                        </div>
-                        <div class="flex">
-                            <div class="flex-shrink-0 mr-4">
-                                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-100 text-brand-600 font-bold">2025</div>
-                            </div>
-                            <div>
-                                <h3 id="history-title-3" class="text-lg font-semibold">현 위치에 교회 이전 건축</h3>
-                                <p id="history-sub-3" class="text-gray-600">새 성전 건축 완료 및 현 위치로 이전</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-    <!-- Donation Information -->
-    <div class="bg-brand-700">
-        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 sm:py-12 lg:py-16 lg:px-8 lg:flex lg:items-center">
-            <div class="lg:w-0 lg:flex-1">
-                <h2 id="donation-title" class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                    Giving & Support
-                </h2>
-                <p id="donation-subtitle" class="mt-3 max-w-3xl text-lg leading-6 text-brand-200">
-                    Support our ministry through your generous donations
-                </p>
-            </div>
-            <div class="mt-8 lg:mt-0 lg:ml-8">
-                <div class="grid gap-4 sm:grid-cols-2">
-                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                        <h3 class="text-lg font-medium text-white">Venmo</h3>
-                        <p class="mt-2 text-brand-200">@Dodream344</p>
-                        <p class="mt-1 text-brand-200">Phone: 678-343-5799</p>
-                    </div>
-                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                        <h3 class="text-lg font-medium text-white">Zelle</h3>
-                        <p class="mt-2 text-brand-200">NCC</p>
-                        <p class="mt-1 text-brand-200">Phone: 404-944-9821</p>
-                    </div>
-                    <div class="bg-white bg-opacity-10 p-4 rounded-lg sm:col-span-2">
-                        <h3 class="text-lg font-medium text-white">Mailing Address</h3>
-                        <p class="mt-2 text-brand-200">3415 Smithtown Road</p>
-                        <p class="text-brand-200">Suwanee, Georgia 30024</p>
-                        <p class="text-brand-200">U.S.A</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer -->
-    <footer class="bg-gray-800">
-        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 sm:py-12">
-            <div class="flex justify-center space-x-6 md:order-2">
+        <!-- Footer -->
+        <footer class="bg-gray-800">
+            <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 sm:py-12">
+                <div class="flex justify-center space-x-6 md:order-2">
                     <a href="#" class="text-gray-400 hover:text-white">
-                        <span class="sr-only">Facebook</span>
-                        <i data-feather="facebook" class="h-6 w-6"></i>
+                    <span class="sr-only">Facebook</span>
+                    <i data-feather="facebook" class="h-6 w-6"></i>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-white">
-                        <span class="sr-only">Instagram</span>
-                        <i data-feather="instagram" class="h-6 w-6"></i>
+                    <span class="sr-only">Instagram</span>
+                    <i data-feather="instagram" class="h-6 w-6"></i>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-white">
-                        <span class="sr-only">Twitter</span>
-                        <i data-feather="twitter" class="h-6 w-6"></i>
+                    <span class="sr-only">Twitter</span>
+                    <i data-feather="twitter" class="h-6 w-6"></i>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-white">
-                        <span class="sr-only">YouTube</span>
-                        <i data-feather="youtube" class="h-6 w-6"></i>
+                    <span class="sr-only">YouTube</span>
+                    <i data-feather="youtube" class="h-6 w-6"></i>
                     </a>
+                </div>
+                <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                    <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                        &copy; 2025 DoDream Baptist Church. All rights reserved.
+                    </p>
+                </div>
             </div>
-            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-                
-                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                    &copy; 2025 DoDream Baptist Church. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
-    <script>
-        const elementsToTranslate = {
-            // PC Nav
-            'nav-home':     { en: 'Home',         ko: '홈' },
-            'nav-about':    { en: 'About',        ko: '교회 소개' },
-                'about-greeting': { en: 'Greeting',        ko: '인사말' },
-                'about-vision':   { en: 'Vision', ko: '교회 비전' },
-                'about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                'about-location': { en: 'Directions', ko: '오시는 길' },
-            'nav-community':{ en: 'Our Community',  ko: '교회 구성' },
-                'community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                'community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                'community-dept':    { en: 'Departments',    ko: '부서' },
-            'nav-events':   { en: 'Events',       ko: '행사 및 모임' },
-                'events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                'events-academy':    { en: 'Academy',         ko: '아카데미' },
-                'events-special':    { en: 'Special Events',   ko: '특별행사' },
-            'nav-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                'nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                'nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-            'nav-smd':      { en: 'SMD344',       ko: 'SMD344 선교단' },
-                'smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                'smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
-            // Mobile Nav
-            'm-home':    { en: 'Home',        ko: '홈' },
-            'm-about':   { en: 'About',        ko: '교회 소개' },
-                'm-about-greeting': { en: 'Greeting',        ko: '인사말' },
-                'm-about-vision':   { en: 'Vision', ko: '교회 비전' },
-                'm-about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
-                'm-about-location': { en: 'Directions', ko: '오시는 길' },
-            'm-community': { en: 'Our Community',  ko: '교회 구성' },
-                'm-community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
-                'm-community-school':  { en: 'Korean School',  ko: '한국 학교' },
-                'm-community-dept':    { en: 'Departments',    ko: '부서' },
-            'm-events':    { en: 'Events',       ko: '행사 및 모임' },
-                'm-events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
-                'm-events-academy':    { en: 'Academy',         ko: '아카데미' },
-                'm-events-special':    { en: 'Special Events',   ko: '특별행사' },
-            'm-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
-                'm-nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
-                'm-nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
-            'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
-                'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
-                'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
-            // Greeting
-            'welcome-title': { en: "Pastor's Greeting", ko: '인사말' },
-            'greeting-title': { en: 'Pastor David Kim', ko: '김인승 목사'},
-            'greeting-sub': { en: 'Senior Pastor',  ko: '담임 목사'},
-            'welcome-text': { en: 'DoDream Baptist Church warmly welcomes you. Believing that “a better world” (Genesis 1) is God’s dream, DoDream offers Sunday worship, an English Ministry (EM) service, youth gatherings, and a Thursday praise service, along with One-Point discipleship training, various seminars, and cultural activities. We desire that all who seek God would find salvation, grow in maturity, and serve as members of Christ’s body. We strive to be a spiritual community that serves our families, our local community, and mission fields.', 
-                              ko: 'Dodream 남 침례교회는 여러분을 진심으로 환영합니다. 더 좋은 세상이란(창1) 하나님의 꿈을 가진 Dodream 교회는 주일예배, EM예배, Youth 모임과 목요 찬양 집회가 있으며, One Point 제자 훈련, 각종 세미나 그리고 문화 활동을 하고 있습니다. Dodream은 하나님을 찾는 모든 성도들이 구원, 성숙, 그리고 사역하는 주님의 몸이 되기를 원하고, 가정과 지역 사회 그리고 선교지를 섬기는 영적 공동체가 되고자 노력하고 있습니다.' },
-            'info-title': { en: 'About Our Pastor', ko: '담임목사 소개' },
-            'info-sub-1': { en: 'Rev. Inseung Kim, son of Rev. Taebeom Kim and a second-generation pastor, is the Senior Pastor of DoDream Baptist Church. He is the founder of SMD344 Missions and currently serves as its U.S. director.', 
-                            ko: '김태범 목사의 아들로 2대째 목사로 3자녀를 둔 김인승 목사는 두드림 교회 담임 목사이며 smd344 선교단 Founder로 현 미주 smd344 선교단 대표입니다.' },
-            'info-sub-2': { en: 'He holds degrees from Sungkyul University; Seoul Theological University (M.Div.); Hanyang University Graduate School of Education (M.Ed.); and Gordon-Conwell Theological Seminary (D.Min.).', 
-                            ko: '성결대와 서울신대(M-div), 한양대 교육 대학원(MED)에서 석사를 취득했고 Gordon-Conwell Theological Seminary 목회학 박사(D-Min)를 취득하였습니다.' },
-            'info-sub-3': { en: 'For over 30 years, through discipleship training, he has focused on raising people who establish the culture of Christ in the world and on advancing missions. Under his leadership, the church has sent 11 short-term missions teams, 3 mid-term workers, and 1 long-term missionary.', 
-                            ko: '김인승 목사는, 지난 30년 간 제자 훈련을 통해 사람을 세워 세상에 그리스도의 문화를 세우고, 선교에 동참하고 있습니다. 단기 선교 11기, 중장기 3기 그리고 장기 1기를 파송했습니다.' },
-            'info-sub-4': { en: 'His publications include the “Tabernacle Study Series” and the leadership curriculum “Life and Ministry.” The Tabernacle series has been translated into more than five languages and is used on mission fields.', 
-                            ko: "저서로는 ‘성막 공과 시리즈’와 리더 공과 ‘삶과 사역’이 있습니다. 성막 공과 시리즈는 현재 5개국 이상 언어로 번역되어 선교지에 사용하고 있습니다." },
-            'info-sub-5': { en: 'For the past decade, he served the Help Line at the Atlanta Youth Center; for five years he contributed a column titled “Vision Correction” to the Christian Times; for two years he hosted an internet broadcast; and for ten years he led the Atlanta radio program “For Brokenhearted Youth with Inseung Kim.”', 
-                            ko: '김인승 목사는 지난 10년 간 애틀랜타 청소년 Center에 속한 Help Line을 섬겼으며 5년 간, 크리스챤 타임즈에 ‘시력교정’이란 글을 기고했고 2년 간 인터넷 방송 진행했으며 10년 간, 애틀랜타 라디오 ‘김인승의 맘 상한 청소년을 위하여’라는 제목으로 방송하였습니다. 김인승 목사는 예수님의 제자 사역을 본받아 30여년간 목회와 제자 훈련과 공동체를 했으며 단기 선교 11기, 중장기 3기 그리고 장기 1기를 파송했습니다.' },
-            // History
-            'history-title': { en: "Church Timeline", ko: '교회 약력' },
-            'history-sub': { en: "DoDream is affiliated with the Southern Baptist Convention.", ko: '두드림 교회는 남침례 교회 소속입니다.' },
-            'history-title-1': { en: 'Korean School Founded', ko: '한국 학교 설립' },
-            'history-sub-1':   { en: 'Opened our Korean School to serve the next generation', ko: '차세대를 위한 한국학교 개교' },
-            'history-title-2': { en: 'Registered with the SBC', ko: '남침례 교회 등록' },
-            'history-sub-2':   { en: 'Officially recognized as a Southern Baptist Convention (SBC) church', ko: '남침례교(SBC) 소속 교회로 공식 등록' },
-            'history-title-3': { en: 'Relocated & Built at Our Current Site', ko: '현 위치에 교회 이전 건축' },
-            'history-sub-3':   { en: 'Completed the new sanctuary and moved to our present location', ko: '새 성전 건축 완료 및 현 위치로 이전' },
-
-            // Donation
-            'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
-            'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
-        };
-    </script>
-    <script src="../assets/js/script.js"></script>
-</body>
+        </footer>
+        <script>
+            const elementsToTranslate = {
+                // PC Nav
+                'nav-home':     { en: 'Home',         ko: '홈' },
+                'nav-about':    { en: 'About',        ko: '교회 소개' },
+                    'about-greeting': { en: 'Greeting',        ko: '인사말' },
+                    'about-vision':   { en: 'Vision', ko: '교회 비전' },
+                    'about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
+                    'about-location': { en: 'Directions', ko: '오시는 길' },
+                'nav-community':{ en: 'Our Community',  ko: '교회 구성' },
+                    'community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
+                    'community-school':  { en: 'Korean School',  ko: '한국 학교' },
+                    'community-dept':    { en: 'Departments',    ko: '부서' },
+                'nav-events':   { en: 'Events',       ko: '행사 및 모임' },
+                    'events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
+                    'events-academy':    { en: 'Academy',         ko: '아카데미' },
+                    'events-special':    { en: 'Special Events',   ko: '특별행사' },
+                'nav-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
+                    'nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
+                    'nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
+                'nav-smd':      { en: 'SMD344',       ko: 'SMD344 선교단' },
+                    'smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
+                    'smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },  
+                // Mobile Nav
+                'm-home':    { en: 'Home',        ko: '홈' },
+                'm-about':   { en: 'About',        ko: '교회 소개' },
+                    'm-about-greeting': { en: 'Greeting',        ko: '인사말' },
+                    'm-about-vision':   { en: 'Vision', ko: '교회 비전' },
+                    'm-about-worship':  { en: 'Worship Schedule', ko: '예배시간 안내' },
+                    'm-about-location': { en: 'Directions', ko: '오시는 길' },
+                'm-community': { en: 'Our Community',  ko: '교회 구성' },
+                    'm-community-pos':     { en: 'POS Groups',     ko: 'POS 모임' },
+                    'm-community-school':  { en: 'Korean School',  ko: '한국 학교' },
+                    'm-community-dept':    { en: 'Departments',    ko: '부서' },
+                'm-events':    { en: 'Events',       ko: '행사 및 모임' },
+                    'm-events-regular':    { en: 'Regular Meetings', ko: '정기모임' },
+                    'm-events-academy':    { en: 'Academy',         ko: '아카데미' },
+                    'm-events-special':    { en: 'Special Events',   ko: '특별행사' },
+                'm-nextgen':  { en: 'Next Gen',     ko: '다음 세대' },
+                    'm-nextgen-ministries':        { en: 'Ministries',    ko: '세대 사역' },
+                    'm-nextgen-gallery':   { en: 'Gallery',          ko: '사진첩' },
+                'm-smd': { en: 'SMD344',       ko: 'SMD344 선교단' },
+                    'm-smd-missionary':    { en: 'Missionaries',     ko: '후원 선교사' },
+                    'm-smd-discipleship':  { en: 'Discipleship',     ko: '제자 훈련' },
+                // Greeting
+                'welcome-title': { en: "Pastor's Greeting", ko: '인사말' },
+                'greeting-title': { en: 'Pastor David Kim', ko: '김인승 목사'},
+                'greeting-sub': { en: 'Senior Pastor',  ko: '담임 목사'},
+                'welcome-text': { en: 'DoDream Baptist Church warmly welcomes you. Believing that “a better world” (Genesis 1) is God’s dream, DoDream offers Sunday worship, an English Ministry (EM) service, youth gatherings, and a Thursday praise service, along with One-Point discipleship training, various seminars, and cultural activities. We desire that all who seek God would find salvation, grow in maturity, and serve as members of Christ’s body. We strive to be a spiritual community that serves our families, our local community, and mission fields.', 
+                                  ko: 'Dodream 남 침례교회는 여러분을 진심으로 환영합니다. 더 좋은 세상이란(창1) 하나님의 꿈을 가진 Dodream 교회는 주일예배, EM예배, Youth 모임과 목요 찬양 집회가 있으며, One Point 제자 훈련, 각종 세미나 그리고 문화 활동을 하고 있습니다. Dodream은 하나님을 찾는 모든 성도들이 구원, 성숙, 그리고 사역하는 주님의 몸이 되기를 원하고, 가정과 지역 사회 그리고 선교지를 섬기는 영적 공동체가 되고자 노력하고 있습니다.' },
+                'info-title': { en: 'About Our Pastor', ko: '담임목사 소개' },
+                'info-sub-1': { en: 'Rev. Inseung Kim, son of Rev. Taebeom Kim and a second-generation pastor, is the Senior Pastor of DoDream Baptist Church. He is the founder of SMD344 Missions and currently serves as its U.S. director.', 
+                                ko: '김태범 목사의 아들로 2대째 목사로 3자녀를 둔 김인승 목사는 두드림 교회 담임 목사이며 smd344 선교단 Founder로 현 미주 smd344 선교단 대표입니다.' },
+                'info-sub-2': { en: 'He holds degrees from Sungkyul University; Seoul Theological University (M.Div.); Hanyang University Graduate School of Education (M.Ed.); and Gordon-Conwell Theological Seminary (D.Min.).', 
+                                ko: '성결대와 서울신대(M-div), 한양대 교육 대학원(MED)에서 석사를 취득했고 Gordon-Conwell Theological Seminary 목회학 박사(D-Min)를 취득하였습니다.' },
+                'info-sub-3': { en: 'For over 30 years, through discipleship training, he has focused on raising people who establish the culture of Christ in the world and on advancing missions. Under his leadership, the church has sent 11 short-term missions teams, 3 mid-term workers, and 1 long-term missionary.', 
+                                ko: '김인승 목사는, 지난 30년 간 제자 훈련을 통해 사람을 세워 세상에 그리스도의 문화를 세우고, 선교에 동참하고 있습니다. 단기 선교 11기, 중장기 3기 그리고 장기 1기를 파송했습니다.' },
+                'info-sub-4': { en: 'His publications include the “Tabernacle Study Series” and the leadership curriculum “Life and Ministry.” The Tabernacle series has been translated into more than five languages and is used on mission fields.', 
+                                ko: "저서로는 ‘성막 공과 시리즈’와 리더 공과 ‘삶과 사역’이 있습니다. 성막 공과 시리즈는 현재 5개국 이상 언어로 번역되어 선교지에 사용하고 있습니다." },
+                'info-sub-5': { en: 'For the past decade, he served the Help Line at the Atlanta Youth Center; for five years he contributed a column titled “Vision Correction” to the Christian Times; for two years he hosted an internet broadcast; and for ten years he led the Atlanta radio program “For Brokenhearted Youth with Inseung Kim.”', 
+                                ko: '김인승 목사는 지난 10년 간 애틀랜타 청소년 Center에 속한 Help Line을 섬겼으며 5년 간, 크리스챤 타임즈에 ‘시력교정’이란 글을 기고했고 2년 간 인터넷 방송 진행했으며 10년 간, 애틀랜타 라디오 ‘김인승의 맘 상한 청소년을 위하여’라는 제목으로 방송하였습니다. 김인승 목사는 예수님의 제자 사역을 본받아 30여년간 목회와 제자 훈련과 공동체를 했으며 단기 선교 11기, 중장기 3기 그리고 장기 1기를 파송했습니다.' },
+                // History
+                'history-title': { en: "Church Timeline", ko: '교회 약력' },
+                'history-sub': { en: "DoDream is affiliated with the Southern Baptist Convention.", ko: '두드림 교회는 남침례 교회 소속입니다.' },
+                'history-title-1': { en: 'Korean School Founded', ko: '한국 학교 설립' },
+                'history-sub-1':   { en: 'Opened our Korean School to serve the next generation', ko: '차세대를 위한 한국학교 개교' },
+                'history-title-2': { en: 'Registered with the SBC', ko: '남침례 교회 등록' },
+                'history-sub-2':   { en: 'Officially recognized as a Southern Baptist Convention (SBC) church', ko: '남침례교(SBC) 소속 교회로 공식 등록' },
+                'history-title-3': { en: 'Relocated & Built at Our Current Site', ko: '현 위치에 교회 이전 건축' },
+                'history-sub-3':   { en: 'Completed the new sanctuary and moved to our present location', ko: '새 성전 건축 완료 및 현 위치로 이전' },
+            
+                // Donation
+                'donation-title': { en: 'Giving & Support', ko: '헌금과 후원' },
+                'donation-subtitle': { en: 'Your heartfelt offerings and gifts are faithfully used to bless our church and mission fields.', ko: '여러분의 소중한 헌금과 헌물은 교회와 선교지를 위해 귀하게 쓰입니다.' }
+            };
+        </script>
+        <script src="../assets/js/script.js"></script>
+    </body>
 </html>

@@ -30,53 +30,49 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             }
-            
             /* Custom styles for the map */
             .country {
-                fill: #e2e8f0;
-                stroke: #fff;
-                stroke-width: 0.5px;
-                transition: all 0.3s ease;
-                stroke-linejoin: round;
+            fill: #e2e8f0;
+            stroke: #fff;
+            stroke-width: 0.5px;
+            transition: all 0.3s ease;
+            stroke-linejoin: round;
             }
             .country:hover {
-                stroke: #adbf88;
-                stroke-width: 1px;
+            stroke: #adbf88;
+            stroke-width: 1px;
             }
             .highlighted {
-                fill: #d1dbbd;
-                cursor: pointer;
-                stroke: #adbf88;
+            fill: #d1dbbd;
+            cursor: pointer;
+            stroke: #adbf88;
             }
             .highlighted:hover {
-                fill: #adbf88;
+            fill: #adbf88;
             }
             /* Tooltip styling */
             #tooltip {
-                position: absolute;
-                padding: 8px 12px;
-                background: rgba(0, 0, 0, 0.8);
-                color: white;
-                border-radius: 4px;
-                pointer-events: none;
-                font-size: 14px;
-                z-index: 10;
-                display: none;
+            position: absolute;
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 4px;
+            pointer-events: none;
+            font-size: 14px;
+            z-index: 10;
+            display: none;
             }
-
             /* Zoom controls */
             .zoom-controls rect:hover {
-                fill: #f0f0f0 !important;
+            fill: #f0f0f0 !important;
             }
-
             .zoom-controls text {
-                pointer-events: none;
-                user-select: none;
+            pointer-events: none;
+            user-select: none;
             }
             #world-map {
-                overflow: visible;
+            overflow: visible;
             }
-
         </style>
     </head>
     <body class="font-korean bg-gray-50 -mt-14 sm:mt-0">
@@ -296,28 +292,27 @@
             </main>
             <h2 id="Missionaries-sub" class="text-2xl font-bold text-primary mb-8 text-center">Click on highlighted countries to learn more</h2>
             <div class="container mx-auto px-4 py-8 pt-16 md:pt-24">
-                
                 <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
                     <div id="country-info" class="bg-brand-50 rounded-t-lg p-6 hidden">
-                    <h2 id="country-info2" class="text-2xl font-semibold text-gray-800 mb-4">Country Information</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="text-xl font-medium text-gray-700 mb-2" id="country-name">Country Name</h3>
-                            <p class="text-gray-600 mb-4" id="country-description">Select a country to see information here.</p>
-                            <div class="flex items-center space-x-2 text-blue-600">
-                                <span id="country-capital">Capital: -</span>
+                        <h2 id="country-info2" class="text-2xl font-semibold text-gray-800 mb-4">Country Information</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-xl font-medium text-gray-700 mb-2" id="country-name">Country Name</h3>
+                                <p class="text-gray-600 mb-4" id="country-description">Select a country to see information here.</p>
+                                <div class="flex items-center space-x-2 text-blue-600">
+                                    <span id="country-capital">Capital: -</span>
+                                </div>
+                                <div class="flex items-center space-x-2 text-green-600 mt-2">
+                                    <span id="country-population">Population: -</span>
+                                </div>
                             </div>
-                            <div class="flex items-center space-x-2 text-green-600 mt-2">
-                                <span id="country-population">Population: -</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-center">
-                            <div id="country-flag" class="w-48 h-32 bg-gray-200 rounded flex items-center justify-center">
-                                <span class="text-gray-500">Flag will appear here</span>
+                            <div class="flex justify-center">
+                                <div id="country-flag" class="w-48 h-32 bg-gray-200 rounded flex items-center justify-center">
+                                    <span class="text-gray-500">Flag will appear here</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                     <div class="md:flex">
                         <div id="world-map" class="w-full h-auto min-h-[500px]"></div>
                     </div>
