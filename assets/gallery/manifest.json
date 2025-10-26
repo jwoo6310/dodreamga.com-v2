@@ -1,14 +1,6 @@
 {
   "albums": [
     {
-      "slug": "2025 retreat",
-      "title": "2025 Retreat",
-      "items": [
-        "01.jpg",
-        "02.jpg"
-      ]
-    },
-    {
       "slug": "2024 Spring Camping",
       "title": "2024 Spring Camping",
       "items": [
@@ -16,17 +8,64 @@
         "album4-2.jpg",
         "album4-3.jpg",
         "album4-4.jpg",
+        "album4-5.JPG",
+        "album4-6.JPG",
+        "album4-7.jpg",
         "album4-8.jpg",
-        "img1.jpg",
-        "img2.jpg"
+        "album4-9.JPG",
+        "album4-10.JPG",
+        "album4-11.JPG",
+        "album4-12.JPG",
+        "album4-13.JPG",
+        "album4-14.jpg",
+        "album4-15.jpg"
       ]
     },
     {
-      "slug": "2023 Winter",
-      "title": "2023 Winter",
+      "slug": "2024 Thanksgiving",
+      "title": "2024 Thanksgiving",
       "items": [
-        "album2-1.jpg",
-        "album2-4.jpg"
+        "IMG_1439.jpg",
+        "IMG_1440.jpg",
+        "IMG_1442.jpg",
+        "IMG_1445.jpg",
+        "IMG_1461.jpg",
+        "IMG_1464.jpg",
+        "IMG_1468.jpg",
+        "IMG_1472.jpg",
+        "IMG_1473.jpg",
+        "IMG_1475.jpg",
+        "IMG_1476.jpg",
+        "IMG_1482.jpg"
+      ]
+    },
+    {
+      "slug": "2023 Winter Outdoor Service",
+      "title": "2023 Winter Outdoor Service",
+      "items": [
+        "album2-1.JPG",
+        "album2-2.JPG",
+        "album2-3.jpg",
+        "album2-4.jpg",
+        "album2-5.jpg",
+        "album2-6.jpg",
+        "album2-7.jpg",
+        "album2-8.jpg",
+        "album2-9.jpg",
+        "album2-10.jpg"
+      ]
+    },
+    {
+      "slug": "2023 Youth Lock-in",
+      "title": "2023 Youth Lock In",
+      "items": [
+        "album3-1.jpg",
+        "album3-2.jpg",
+        "album3-3.jpg",
+        "album3-4.jpg",
+        "album3-5.jpg",
+        "album3-6.jpg",
+        "album3-7.jpg"
       ]
     },
     {
