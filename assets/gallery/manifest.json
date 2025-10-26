@@ -1,0 +1,48 @@
+{
+  "albums": [
+    {
+      "slug": "2025 retreat",
+      "title": "2025 Retreat",
+      "items": [
+        "01.jpg",
+        "02.jpg"
+      ]
+    },
+    {
+      "slug": "2024 Spring Camping",
+      "title": "2024 Spring Camping",
+      "items": [
+        "album4-1.jpg",
+        "album4-2.jpg",
+        "album4-3.jpg",
+        "album4-4.jpg",
+        "album4-8.jpg",
+        "img1.jpg",
+        "img2.jpg"
+      ]
+    },
+    {
+      "slug": "2023 Winter",
+      "title": "2023 Winter",
+      "items": [
+        "album2-1.jpg",
+        "album2-4.jpg"
+      ]
+    },
+    {
+      "slug": "2022 Youth Retreat",
+      "title": "2022 Youth Retreat",
+      "items": [
+        "album1-1.jpg",
+        "album1-2.jpg",
+        "album1-3.jpg",
+        "album1-4.jpg",
+        "album1-5.jpg",
+        "album1-6.jpg",
+        "album1-7.jpg",
+        "album1-8.jpg",
+        "album1-9.jpg"
+      ]
+    }
+  ]
+}
