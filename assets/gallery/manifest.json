@@ -1,6 +1,23 @@
 {
   "albums": [
     {
+      "slug": "2025 Outdoor Service",
+      "title": "2025 Outdoor Service",
+      "items": [
+        "IMG_5708.JPG",
+        "IMG_6195.JPG",
+        "IMG_6196.JPG",
+        "IMG_6197.JPG",
+        "IMG_6198.JPG",
+        "IMG_6199.JPG",
+        "IMG_6200.JPG",
+        "IMG_6201.JPG",
+        "IMG_6202.JPG",
+        "IMG_6203.JPG",
+        "IMG_6204.JPG"
+      ]
+    },
+    {
       "slug": "2024 Spring Camping",
       "title": "2024 Spring Camping",
       "items": [
@@ -40,8 +57,8 @@
       ]
     },
     {
-      "slug": "2023 Winter Outdoor Service",
-      "title": "2023 Winter Outdoor Service",
+      "slug": "2023 Outdoor Service",
+      "title": "2023 Outdoor Service",
       "items": [
         "album2-1.JPG",
         "album2-2.JPG",
@@ -50,9 +67,7 @@
         "album2-5.jpg",
         "album2-6.jpg",
         "album2-7.jpg",
-        "album2-8.jpg",
-        "album2-9.jpg",
-        "album2-10.jpg"
+        "album2-8.jpg"
       ]
     },
     {
