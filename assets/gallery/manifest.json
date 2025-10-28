@@ -1,41 +1,64 @@
 {
   "albums": [
     {
+      "slug": "2025 DoDream X TIA Taekwondo",
+      "title": "2025 DoDream X TIA Taekwondo",
+      "items": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ]
+    },
+    {
       "slug": "2025 Outdoor Service",
       "title": "2025 Outdoor Service",
       "items": [
-        "IMG_5708.JPG",
-        "IMG_6195.JPG",
-        "IMG_6196.JPG",
-        "IMG_6197.JPG",
-        "IMG_6198.JPG",
-        "IMG_6199.JPG",
-        "IMG_6200.JPG",
-        "IMG_6201.JPG",
-        "IMG_6202.JPG",
-        "IMG_6203.JPG",
-        "IMG_6204.JPG"
+        "1 (2).jpg",
+        "2 (2).jpg",
+        "3 (2).jpg",
+        "4 (2).jpg",
+        "5 (2).jpg",
+        "6 (2).jpg",
+        "7 (2).jpg",
+        "8 (2).jpg",
+        "9 (2).jpg",
+        "10 (2).jpg",
+        "11 (2).jpg"
+      ]
+    },
+    {
+      "slug": "2025 Youth",
+      "title": "2025 Youth",
+      "items": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg",
+        "9.jpg"
       ]
     },
     {
       "slug": "2024 Spring Camping",
       "title": "2024 Spring Camping",
       "items": [
-        "album4-1.jpg",
-        "album4-2.jpg",
-        "album4-3.jpg",
-        "album4-4.jpg",
-        "album4-5.JPG",
-        "album4-6.JPG",
-        "album4-7.jpg",
-        "album4-8.jpg",
-        "album4-9.JPG",
-        "album4-10.JPG",
-        "album4-11.JPG",
-        "album4-12.JPG",
-        "album4-13.JPG",
-        "album4-14.jpg",
-        "album4-15.jpg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.JPG",
+        "6.jpg",
+        "7.JPG",
+        "8.JPG",
+        "9.JPG",
+        "10.JPG",
+        "11.jpg",
+        "12.jpg"
       ]
     },
     {
@@ -44,7 +67,6 @@
       "items": [
         "IMG_1439.jpg",
         "IMG_1440.jpg",
-        "IMG_1442.jpg",
         "IMG_1445.jpg",
         "IMG_1461.jpg",
         "IMG_1464.jpg",
@@ -60,42 +82,42 @@
       "slug": "2023 Outdoor Service",
       "title": "2023 Outdoor Service",
       "items": [
-        "album2-1.JPG",
-        "album2-2.JPG",
-        "album2-3.jpg",
-        "album2-4.jpg",
-        "album2-5.jpg",
-        "album2-6.jpg",
-        "album2-7.jpg",
-        "album2-8.jpg"
+        "1.JPG",
+        "2.JPG",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg"
       ]
     },
     {
       "slug": "2023 Youth Lock-in",
       "title": "2023 Youth Lock In",
       "items": [
-        "album3-1.jpg",
-        "album3-2.jpg",
-        "album3-3.jpg",
-        "album3-4.jpg",
-        "album3-5.jpg",
-        "album3-6.jpg",
-        "album3-7.jpg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg"
       ]
     },
     {
       "slug": "2022 Youth Retreat",
       "title": "2022 Youth Retreat",
       "items": [
-        "album1-1.jpg",
-        "album1-2.jpg",
-        "album1-3.jpg",
-        "album1-4.jpg",
-        "album1-5.jpg",
-        "album1-6.jpg",
-        "album1-7.jpg",
-        "album1-8.jpg",
-        "album1-9.jpg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg",
+        "9.jpg"
       ]
     }
   ]
