@@ -301,6 +301,10 @@
                                             <p class="text-base font-medium text-gray-900">11:00 AM</p>
                                         </div>
                                         <div class="flex items-center justify-between py-2 border-b border-gray-200">
+                                            <p id="findus-em" class="text-base text-gray-600">EM Worship</p>
+                                            <p class="text-base font-medium text-gray-900">11:00 AM</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 border-b border-gray-200">
                                             <p id="findus-youth" class="text-base text-gray-600">Sunday Youth Meeting</p>
                                             <p class="text-base font-medium text-gray-900">1:00 PM</p>
                                         </div>
@@ -313,9 +317,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:w-1/2 md:pl-8">
-                        <div class="rounded-lg overflow-hidden shadow-md h-full">
-                            <iframe class="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.791389967094!2d-84.00693249999999!3d34.1004842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5975d1e288a51%3A0xca7fe880cd94d216!2z65GQ65Oc66a8IOy5qOuhgOq1kO2ajCBEb0RyZWFtIEJhcHRpc3QgQ2h1cmNo!5e0!3m2!1sen!2sus!4v1760911078886!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <div class="md:w-1/2 md:pl-8 flex">
+                        <div class="rounded-lg overflow-hidden shadow-md flex-1">
+                            <iframe
+                                class="w-full h-full min-h-[380px]"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.791389967094!2d-84.00693249999999!3d34.1004842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5975d1e288a51%3A0xca7fe880cd94d216!2z65GQ65Oc66a8IOy5qOuhgOq1kO2ajCBEb0RyZWFtIEJhcHRpc3QgQ2h1cmNo!5e0!3m2!1sen!2sus!4v1760911078886!5m2!1sen!2sus"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                 </div>
@@ -432,6 +443,7 @@
                 'findus-location-title': { en: 'Our Location', ko: '교회 위치' },
                 'findus-servicetimes-title': { en: 'Service Times', ko: '예배 시간' },
                 'findus-sunday': { en: 'Sunday Worship', ko: '주일 예배' },
+                'findus-em': { en: 'EM Worship', ko: 'EM 예배' },
                 'findus-youth': { en: 'Sunday Youth Meeting', ko: '주일 유스 모임' },
                 'findus-thu': { en: 'Thursday Praise', ko: '목요 찬양' },
                 // Donation

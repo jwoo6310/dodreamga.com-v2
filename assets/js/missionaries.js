@@ -182,12 +182,12 @@ const countryData = {
 
     "United States of America": {
         title: {
-            ko: "미국",
-            en: "United States of America"
+            ko: "미국: 김인승, 안성희 선교사님",
+            en: "United States – Missionaries Rev. Inseung Kim & Sunghee Ahn"
         },
         desc: {
-            ko: "두드림 교회가 파트너십으로 함께 섬기는 지역들입니다.",
-            en: "Partner regions served alongside DoDream Church."
+            ko: "두드림 교회를 중심으로 한국, 필리핀과 함께 창세기 1장의 비전을 이루어 가는 공동체입니다. 제자 양육을 통해 건강한 교회를 세우고, 지역에 봉사하며 문화 사역을 통하여 하나님을 전하고 지역에 하나님의 문화가 세우고 있습니다. 또한 인도차이나를 비롯한 여러 지역 선교사를 후원하고 있습니다.",
+            en: "This is a community centered on DoDream Church that, together with Korea and the Philippines, is pursuing the vision of Genesis 1. Through disciple-making, we build healthy churches, serve the local community, and proclaim God through cultural ministries so that God’s culture is established in the region. We also support missionaries in various fields, including Indochina."
         }
     },
 
@@ -197,8 +197,8 @@ const countryData = {
             en: "South Korea — Pastors Kim Taejoo & Ko Eunsuk"
         },
         desc: {
-            ko: "열방위에 서는교회 smd344 HQ",
-            en: "Church Standing for the Nations, smd344 HQ."
+            ko: "SMD344 선교단 본부로 한국, 필리핀 그리고 미국 지부와 연합하여 창세기1장의 비전을 이루고, 열방위에 서는 교회를 세워 영혼을 구원하고 제자로 세웁니다. 특히 선교에 힘쓰고, 도서관 사역을 통해 지역에 봉사하고 있습니다.",
+            en: "As the headquarters of the SMD344 Mission, it works in unity with the Korea, Philippines, and U.S. branches to fulfill the vision of Genesis 1, planting churches that stand among the nations to save souls and make disciples. In particular, it is devoted to missions and serves the local community through a library ministry."
         }
     }
 };
