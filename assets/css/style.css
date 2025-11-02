@@ -1,0 +1,19 @@
+/* Shared extracted styles (previously duplicated inline in many HTML files) */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+.font-korean {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.font-serif-korean {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+}
+
+.sermon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
